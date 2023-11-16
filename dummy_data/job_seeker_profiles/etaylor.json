@@ -1,0 +1,55 @@
+{
+  "id": "etaylor",
+  "role": "job_seeker",
+  "firstName": "Emily",
+  "lastName": "Taylor",
+  "dateOfBirth": "1988-12-02",
+  "address": "234 Tech Boulevard, IT City 45678",
+  "email": "emily.taylor@example.com",
+  "phoneNumber": "+1 (555) 7654321",
+  "careerObjective": "IT Sales Consultant",
+  "activeChats": [10, 11, 12],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "institution": "Tech Institute",
+      "graduationYear": 2010
+    },
+    {
+      "degree": "Master of Business Administration",
+      "specialization": "Marketing",
+      "institution": "Business School",
+      "graduationYear": 2012
+    }
+  ],
+  "workExperience": [
+    {
+      "position": "IT Sales Associate",
+      "employer": "Tech Solutions Corp.",
+      "employmentPeriod": "2012-2017",
+      "responsibilities": [
+        "Identifying and pursuing sales opportunities",
+        "Building and maintaining client relationships",
+        "Negotiating contracts and closing deals"
+      ]
+    },
+    {
+      "position": "Senior IT Sales Consultant",
+      "employer": "Digital Dynamics Inc.",
+      "employmentPeriod": "2017-present",
+      "responsibilities": [
+        "Consulting with clients to understand IT needs",
+        "Presenting and demonstrating solutions",
+        "Collaborating with technical teams for customized solutions"
+      ]
+    }
+  ],
+  "skills": [
+    "IT sales",
+    "Client relationship management",
+    "Negotiation",
+    "Technical product knowledge",
+    "Strategic planning"
+  ],
+  "additionalInformation": "Results-driven IT sales professional with a proven ability to meet and exceed sales targets. Seeking a challenging role as an IT Sales Consultant to leverage technical expertise and business acumen."
+}
