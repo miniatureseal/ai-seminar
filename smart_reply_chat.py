@@ -4,13 +4,13 @@ from openai_key_retrieval import get_openai_key
 from langchain.chat_models import ChatOpenAI
 from datetime import datetime
 from template_generator import TemplateGenerator
-from dummy_data_loader import DummyDataLoader
+from dummy_data_access import DummyDataAccess
 
 class IntelligentChat:
 
     def __init__(self, chatUser, activeChatId):
         self.chat_model = ChatOpenAI(get_openai_key())
-        self.dummy_data_loader = DummyDataLoader()
+        self.dummy_data_access = DummyDataAccess()
         self.template_generator = TemplateGenerator()
         self.chatUser = chatUser
         self.user_profile = self._loadUserProfile(chatUser)
@@ -51,9 +51,9 @@ class IntelligentChat:
     def _load_chats(self, activeChatId):
         # We load all user chats as we want to use them as context for the smart reply prompts
         # later on
-        chats = self.dummy_data_loader.read_chats(self.user_profile["chatIds"])
+        chats = self.dummy_data_access.read_chats(self.user_profile["chatIds"])
         self.active_chat = chats.pop(activeChatId, None)
         self.context_chats = chats
     
-    def _persist_chat():
-        return
+    def _persist_chat(self):
+        self.dummy_data_access.persist_chat(self.active_chat)

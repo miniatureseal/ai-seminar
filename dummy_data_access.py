@@ -1,7 +1,7 @@
 import json
 import os
 
-class DummyDataLoader:
+class DummyDataAccess:
     def __init__(self):
         self.chat_folder_path = "/dummy_data/chats"
         self.company_profile_path = "/dummy_data/company_profiles"
@@ -51,5 +51,11 @@ class DummyDataLoader:
             return data
         else:
             return None
-    
+        
+    def persist_chat(self, chat_data):
+        chat_id = chat_data["id"]
+        chat_file_path = os.path.join(self.chat_folder_path, f"{chat_id}.json")
+
+        with open(chat_file_path, "w") as file:
+            json.dump(chat_data, file, indent=2)
     
