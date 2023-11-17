@@ -8,7 +8,7 @@
   "email": "emily.taylor@example.com",
   "phoneNumber": "+1 (555) 7654321",
   "careerObjective": "IT Sales Consultant",
-  "activeChats": [10, 11, 12],
+  "activeChats": ["10", "11", "12"],
   "education": [
     {
       "degree": "Bachelor of Science in Information Technology",

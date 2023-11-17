@@ -8,7 +8,7 @@
   "email": "anna.mueller@example.com",
   "phoneNumber": "+49 123 4567890",
   "careerObjective": "Biotechnology Laboratory Technician",
-  "activeChats": [1, 2, 3],
+  "activeChats": ["1", "2", "3"],
   "education": [
     {
       "degree": "Bachelor of Science in Biology",

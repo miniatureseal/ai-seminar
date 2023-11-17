@@ -8,7 +8,7 @@
     "email": "michael.johnson@example.com",
     "phoneNumber": "+1 (555) 8765432",
     "careerObjective": "Transitioning from Investment Banking to Structured Sales",
-    "activeChats": [7, 8, 9],
+    "activeChats": ["7", "8", "9"],
     "education": [
       {
         "degree": "Bachelor of Business Administration",
