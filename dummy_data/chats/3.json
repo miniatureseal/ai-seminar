@@ -24,8 +24,33 @@
     },
     {
       "senderUserId": "amueller",
-      "content": "Absolutely! In my current role, I collaborated with a cross-functional team to develop a new assay, where my molecular biology expertise complemented the skills of my colleagues in data analysis and bioinformatics. Our teamwork resulted in a successful project outcome.",
+      "content": "Certainly! In my previous position at the Pharmaceutical Institute, I led a team in developing a new assay for drug discovery. It involved close collaboration with researchers, and we successfully delivered the project ahead of schedule.",
       "timestamp": "2023-01-17T16:05:00"
+    },
+    {
+      "senderUserId": "biogen",
+      "content": "Impressive, Anna! We're also interested in your work preferences. What kind of projects or tasks are you most passionate about?",
+      "timestamp": "2023-01-17T16:10:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "I'm particularly passionate about projects that involve the application of molecular biology techniques to advance drug discovery and development. I find the intersection of research and practical applications highly rewarding.",
+      "timestamp": "2023-01-17T16:15:00"
+    },
+    {
+      "senderUserId": "biogen",
+      "content": "That's great to know, Anna. One last question for now: What salary range are you looking for in this role?",
+      "timestamp": "2023-01-17T16:20:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "I'm aiming for a salary in the range of $80,000 to $90,000 per year, considering my education, skills, and experience. I believe it reflects the value I can bring to the team.",
+      "timestamp": "2023-01-17T16:25:00"
+    },
+    {
+      "senderUserId": "biogen",
+      "content": "Thank you for sharing that, Anna. We appreciate your transparency. We'll review your application and get back to you soon.",
+      "timestamp": "2023-01-17T16:30:00"
     }
   ]
 }

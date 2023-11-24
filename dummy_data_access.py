@@ -1,11 +1,12 @@
 import json
 import os
 
+
 class DummyDataAccess:
     def __init__(self):
-        self.chat_folder_path = "/dummy_data/chats"
-        self.company_profile_path = "/dummy_data/company_profiles"
-        self.job_seeker_profile_path = "/dummy_data/job_seeker_profiles"
+        self.chat_folder_path = "./dummy_data/chats"
+        self.company_profile_path = "./dummy_data/company_profiles"
+        self.job_seeker_profile_path = "./dummy_data/job_seeker_profiles"
 
     def read_chats(self, chat_ids):
         chats_dict = {}
@@ -27,15 +28,41 @@ class DummyDataAccess:
         if chat_data == None:
             print(f"Chat data not found for {chat_id}")
         return chat_data
-    
+
+    def read_chat_data(self):
+        chat_data = {}
+
+        for filename in os.listdir(self.chat_folder_path):
+            if filename.endswith(".json"):
+                chat_id = os.path.splitext(filename)[0]
+                file_path = os.path.join(self.chat_folder_path, filename)
+
+                with open(file_path, "r") as file:
+                    data = json.load(file)
+
+                    participating_users = data.get("participatingUsers", [])
+                    messages = data.get("messages", [])
+
+                    for message in messages:
+                        sender = message.get("senderUserId", "")
+                        if sender not in chat_data:
+                            chat_data[sender] = []
+                        chat_data[sender].append(message.get("content", ""))
+
+        return chat_data
+
     def read_profile(self, user_id: str):
-        company_profile_path = os.path.join(self.company_profile_path, f"{user_id}.json")
+        company_profile_path = os.path.join(
+            self.company_profile_path, f"{user_id}.json"
+        )
         if os.path.exists(company_profile_path):
             with open(company_profile_path, "r") as file:
                 company_profile = json.load(file)
             return company_profile
 
-        job_seeker_profile_path = os.path.join(self.job_seeker_profile_path, f"{user_id}.json")
+        job_seeker_profile_path = os.path.join(
+            self.job_seeker_profile_path, f"{user_id}.json"
+        )
         if os.path.exists(job_seeker_profile_path):
             with open(job_seeker_profile_path, "r") as file:
                 job_seeker_profile = json.load(file)
@@ -51,11 +78,10 @@ class DummyDataAccess:
             return data
         else:
             return None
-        
+
     def persist_chat(self, chat_data):
         chat_id = chat_data["id"]
         chat_file_path = os.path.join(self.chat_folder_path, f"{chat_id}.json")
 
         with open(chat_file_path, "w") as file:
             json.dump(chat_data, file, indent=2)
-    
