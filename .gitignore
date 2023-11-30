@@ -161,5 +161,6 @@ cython_debug/
 
 # Custom stuff
 temp.txt
-database
-!database/.gitkeep
+src/database/
+!src/database/.gitkeep
+chroma_testing.py
