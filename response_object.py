@@ -1,0 +1,7 @@
+from langchain.pydantic_v1 import BaseModel, Field
+
+
+class ResponseObject(BaseModel):
+    reply1: str = Field(description="The first generated reply")
+    reply2: str = Field(description="The second generated reply")
+    reply3: str = Field(description="The third generated reply")
