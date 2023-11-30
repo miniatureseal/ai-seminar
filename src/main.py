@@ -1,9 +1,13 @@
 import tkinter as tk
 from chat_ui import ChatInterface
 from smart_reply_chat import IntelligentChat
+from db_helper import ChromaDBHelper
 
 chat_user_id = "amueller"
 chat_id = "2"
+
+db_helper = ChromaDBHelper()
+db_helper.initialize_db()
 
 active_chat = IntelligentChat(chat_user_id, chat_id)
 smart_replies = active_chat.generate_smart_replies()

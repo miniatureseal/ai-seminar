@@ -1,12 +1,13 @@
 import json
 import os
+from pyprojroot.here import here
 
 
 class DummyDataAccess:
     def __init__(self):
-        self.chat_folder_path = "./dummy_data/chats"
-        self.company_profile_path = "./dummy_data/company_profiles"
-        self.job_seeker_profile_path = "./dummy_data/job_seeker_profiles"
+        self.chat_folder_path = str(here("src/dummy_data/chats"))
+        self.company_profile_path = str(here("src/dummy_data/company_profiles"))
+        self.job_seeker_profile_path = str(here("src/dummy_data/job_seeker_profiles"))
 
     def read_chats(self, chat_ids):
         chats_dict = {}
@@ -30,24 +31,15 @@ class DummyDataAccess:
         return chat_data
 
     def read_chat_data(self):
-        chat_data = {}
+        chat_data = []
 
         for filename in os.listdir(self.chat_folder_path):
             if filename.endswith(".json"):
-                chat_id = os.path.splitext(filename)[0]
                 file_path = os.path.join(self.chat_folder_path, filename)
 
                 with open(file_path, "r") as file:
                     data = json.load(file)
-
-                    participating_users = data.get("participatingUsers", [])
-                    messages = data.get("messages", [])
-
-                    for message in messages:
-                        sender = message.get("senderUserId", "")
-                        if sender not in chat_data:
-                            chat_data[sender] = []
-                        chat_data[sender].append(message.get("content", ""))
+                    chat_data.append(data)
 
         return chat_data
 

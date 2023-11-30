@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import scrolledtext, Listbox, RIGHT, LEFT, END
+from tkinter import scrolledtext, RIGHT, LEFT, END
 
 
 class ChatInterface:
@@ -68,6 +68,7 @@ class ChatInterface:
         self.chat_display.tag_configure(sender, background="#E0E0E0")
 
 
+# Dummy code for testing out the UI
 if __name__ == "__main__":
     messages_data = [
         {
