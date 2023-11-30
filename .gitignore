@@ -162,3 +162,4 @@ cython_debug/
 # Custom stuff
 temp.txt
 database
+!database/.gitkeep
