@@ -18,8 +18,12 @@ class TemplateGenerator:
         "------------\n"
         "{chat_history}\n"
         "------------\n"
+        "Latest message from user {chat_partner_user_id} to reply to:"
+        "------------\n"
+        "{message_to_reply_to}\n"
+        "------------\n"
         "Generate three possible replies user {active_user_id} could write taking into consideration the chat so far, as well as the relevant messages provided from previous chats.\n"
-        "Take into consideration the users writing style so far. Each generated reply should address all questions and open points of the opposing parties latest message of user {chat_partner_user_id} given the timestamp of the message. The replies should not include information already written in the chat so far. Keep the answer short.\n\n"
+        "Take into consideration the users writing style so far. Each generated reply should address all questions and open points of the message which should be replied to. The replies should not include information already written in the chat so far. Keep the answer short.\n\n"
     )
 
     _CONTEXT_INFO_COMPANY = "User {active_user_id} is a representant of a company and is seeking people to hire for a job.\n"

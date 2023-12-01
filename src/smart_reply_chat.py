@@ -44,6 +44,7 @@ class IntelligentChat:
                 "active_user_id": itemgetter("active_user_id"),
                 "chat_history": itemgetter("chat_history"),
                 "chat_partner_user_id": itemgetter("chat_partner_user_id"),
+                "message_to_reply_to": itemgetter("message_to_reply_to"),
             }
             | self._generate_prompt()
             | chat_model
@@ -70,7 +71,7 @@ class IntelligentChat:
     def generate_smart_replies(self):
         return self.rag_chain.invoke(
             {
-                "message_to_reply_to": self._get_message_to_reply_to(),
+                "message_to_reply_to": self._get_messages_to_reply_to(),
                 "chat_history": self.active_chat["messages"],
                 "active_user_id": self.chat_user,
                 "chat_partner_user_id": self.chat_partner_user_id,
@@ -106,6 +107,12 @@ class IntelligentChat:
 
             if sender == self.chat_partner_user_id:
                 latest_messages.append(message["content"])
+
+        if not latest_messages:
+            return ""
+
+        if len(latest_messages) == 1:
+            return latest_messages[0]
 
         return latest_messages.join(" ")
 
