@@ -163,4 +163,5 @@ cython_debug/
 temp.txt
 src/database/
 !src/database/.gitkeep
-chroma_testing.py
+src/output/
+!src/output/.gitkeep
