@@ -3,8 +3,11 @@ from chat_ui import ChatInterface
 from smart_reply_chat import IntelligentChat
 from db_helper import ChromaDBHelper
 
+# Chat user from which perspective the chat is opened
 chat_user_id = "amueller"
+# Chat in which user with user id chat_user_id is participating in
 chat_id = "1"
+# Name of the participant of the experiment, used for logging by whom a message was written
 experiment_participant_name = "Jan"
 
 db_helper = ChromaDBHelper()
