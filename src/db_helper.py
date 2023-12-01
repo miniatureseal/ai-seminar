@@ -61,7 +61,7 @@ class ChromaDBHelper:
             for doc, id in zip(chat_messages, ids)
             if id not in seen_ids
             and (seen_ids.add(id) or True)
-            and id not in db_duplicates
+            and id not in db_duplicates["ids"]
         ]
 
         self.message_collection.add(
