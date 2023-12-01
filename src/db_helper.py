@@ -56,24 +56,25 @@ class ChromaDBHelper:
         db_duplicates = self.message_collection.get(ids=unique_ids, include=[])
 
         seen_ids = set()
-        unique_docs = [
-            doc
-            for doc, id in zip(chat_messages, ids)
-            if id not in seen_ids
-            and (seen_ids.add(id) or True)
-            and id not in db_duplicates["ids"]
-        ]
 
-        self.message_collection.add(
-            ids=unique_ids, documents=unique_docs, metadatas=chat_message_metadata
-        )
+        ids_to_add = []
+        docs_to_add = []
+        metadata_to_add = []
 
-    def reset_and_reinitalize_db(self):
-        """
-        Works like initialize_db(), but resets and rereads all of the dummy chat data again.
-        """
-        self.vectorstore_client.reset()
-        self.initialize_db()
+        for doc, metadata, id in zip(chat_messages, chat_message_metadata, ids):
+            if (
+                id not in seen_ids
+                and (seen_ids.add(id) or True)
+                and id not in db_duplicates["ids"]
+            ):
+                ids_to_add.append(id)
+                docs_to_add.append(doc)
+                metadata_to_add.append(metadata)
+
+        if len(ids_to_add) > 0:
+            self.message_collection.add(
+                ids=ids_to_add, documents=docs_to_add, metadatas=metadata_to_add
+            )
 
     def get_langchain_retriever(self, chat_user, active_chat_id):
         langchain_chroma = Chroma(
