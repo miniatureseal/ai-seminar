@@ -1,10 +1,20 @@
 import tkinter as tk
 from tkinter import scrolledtext, RIGHT, LEFT, END
 
+import json
+import uuid
+import os
+from pyprojroot.here import here
+
 
 class ChatInterface:
-    def __init__(self, root, messages, active_user):
+    def __init__(
+        self, root, messages, active_user, chat_id, experiment_participant_name
+    ):
         self.root = root
+        self.experiment_participant_name = experiment_participant_name
+
+        self.chat_id = chat_id
         self.root.title("Smart reply chat")
         self.root.geometry("600x800")
 
@@ -29,8 +39,8 @@ class ChatInterface:
         self.entry_field = tk.Text(root, wrap=tk.WORD, height=5, width=70)
         self.entry_field.pack(pady=5)
 
-        send_button = tk.Button(root, text="Send", command=self.send_message)
-        send_button.pack(pady=5)
+        self.send_button = tk.Button(root, text="Send", command=self.send_message)
+        self.send_button.pack(pady=5)
 
         self.display_messages(messages, active_user)
 
@@ -38,8 +48,18 @@ class ChatInterface:
         message = self.entry_field.get("1.0", tk.END).strip()
 
         self.display_user_message("You", "You", message, align=RIGHT)
+        self.save_user_input_to_file(
+            {
+                "written_by": self.experiment_participant_name,
+                "chat_id": self.chat_id,
+                "chosen_suggestion": self.last_selected_suggestion,
+                "written_message": message,
+            }
+        )
 
+        self.send_button.config(state="disabled")
         self.entry_field.delete("1.0", tk.END)
+        self.entry_field.insert(tk.END, "Thank you for taking part in the experiment!")
 
     def populate_suggestions(self, suggestions):
         if len(suggestions) == len(self.suggestion_texts):
@@ -50,6 +70,8 @@ class ChatInterface:
 
     def insert_suggestion(self, event, suggestion_number):
         selected_suggestion = event.widget.get("1.0", tk.END).strip()
+
+        self.last_selected_suggestion = selected_suggestion
 
         self.entry_field.delete("1.0", tk.END)
         self.entry_field.insert(tk.END, selected_suggestion)
@@ -66,6 +88,14 @@ class ChatInterface:
         formatted_message = f"{sender}: {content}"
         self.chat_display.insert(tk.END, formatted_message + "\n\n", align)
         self.chat_display.tag_configure(sender, background="#E0E0E0")
+
+    def save_user_input_to_file(self, data):
+        unique_id = str(uuid.uuid4())
+
+        filename = f"{unique_id}.json"
+        filepath = str(here("src/output/" + filename))
+        with open(filepath, "w") as file:
+            json.dump(data, file, indent=4)
 
 
 # Dummy code for testing out the UI
