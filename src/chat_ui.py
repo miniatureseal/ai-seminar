@@ -3,14 +3,17 @@ from tkinter import scrolledtext, RIGHT, LEFT, END
 
 import json
 import uuid
-import os
 from pyprojroot.here import here
+from nltk import download
+from nltk.translate import bleu_score
+from nltk.tokenize import word_tokenize
 
 
 class ChatInterface:
     def __init__(
         self, root, messages, active_user, chat_id, experiment_participant_name
     ):
+        download("punkt")
         self.root = root
         self.experiment_participant_name = experiment_participant_name
 
@@ -48,12 +51,18 @@ class ChatInterface:
         message = self.entry_field.get("1.0", tk.END).strip()
 
         self.display_user_message("You", "You", message, align=RIGHT)
+        suggested_tokens = word_tokenize(self.last_selected_suggestion.lower())
+        user_edited_tokens = word_tokenize(message.lower())
+        bleu_result = bleu_score.sentence_bleu(
+            [suggested_tokens], user_edited_tokens, weights=(1, 0, 0, 0)
+        )
         self.save_user_input_to_file(
             {
                 "written_by": self.experiment_participant_name,
                 "chat_id": self.chat_id,
                 "chosen_suggestion": self.last_selected_suggestion,
                 "written_message": message,
+                "bleu_score": bleu_result,
             }
         )
 
