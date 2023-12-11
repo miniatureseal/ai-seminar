@@ -117,7 +117,7 @@ class IntelligentChat:
         return latest_messages.join(" ")
 
     def _generate_prompt(self):
-        if self.user_profile["role"] == "company":
+        if self.user_profile["role"] == "work_provider":
             return self.template_generator.get_company_prompt_template()
 
         if self.user_profile["role"] == "job_seeker":

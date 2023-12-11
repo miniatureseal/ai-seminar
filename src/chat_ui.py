@@ -1,8 +1,8 @@
 import tkinter as tk
-from tkinter import scrolledtext, RIGHT, LEFT, END
+from tkinter import scrolledtext, RIGHT, LEFT
 
 import json
-import uuid
+import time
 import os
 from pyprojroot.here import here
 from nltk import download
@@ -76,6 +76,7 @@ class ChatInterface:
         self.send_button.config(state="disabled")
         self.entry_field.delete("1.0", tk.END)
         self.entry_field.insert(tk.END, "Thank you for taking part in the experiment!")
+        self.root.destroy()
 
     def populate_suggestions(self, suggestions):
         if len(suggestions) == len(self.suggestion_texts):
