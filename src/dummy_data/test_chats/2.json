@@ -1,0 +1,26 @@
+{
+  "chatId": 2,
+  "participatingUsers": ["amueller", "xyzpharma"],
+  "messages": [
+    {
+      "senderUserId": "amueller",
+      "content": "Hi there, I'm interested in the Biotechnology Laboratory Technician position at XYZ Pharmaceuticals. Can you share more information about the working environment and team?",
+      "timestamp": "2023-01-16T09:00:00"
+    },
+    {
+      "senderUserId": "xyzpharma",
+      "content": "Hello Anna, our lab is equipped with state-of-the-art facilities, and we have a collaborative and innovative team. What experience do you have with laboratory equipment and instrumentation?",
+      "timestamp": "2023-01-16T09:05:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "That sounds great! I'm experienced in working with various laboratory equipment, including PCR machines, microscopes, and centrifuges. I believe I'd be a valuable addition to your team.",
+      "timestamp": "2023-01-16T09:10:00"
+    },
+    {
+      "senderUserId": "xyzpharma",
+      "content": "Excellent, Anna. We think you would be a good fit as well. What are your salary expectations?",
+      "timestamp": "2023-01-16T09:15:00"
+    }
+  ]
+}

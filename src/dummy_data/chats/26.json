@@ -1,0 +1,26 @@
+{
+  "chatId": 26,
+  "participatingUsers": ["amueller", "abcbiotech"],
+  "messages": [
+    {
+      "senderUserId": "amueller",
+      "content": "Hello! I noticed your job posting for a Biotechnology Laboratory Technician position at ABC Biotech Ltd. I'm very interested in this role.",
+      "timestamp": "2023-03-16T12:30:00"
+    },
+    {
+      "senderUserId": "abcbiotech",
+      "content": "Hello Anna, we're looking for someone with a strong background in molecular biology and experience in assay development. Can you tell me about your experience in these areas?",
+      "timestamp": "2023-03-16T12:35:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "Certainly! I have a Master's in Molecular Biology and have worked on assay development during my current job at the Pharmaceutical Institute. I'd love to discuss my qualifications further.",
+      "timestamp": "2023-03-16T12:40:00"
+    },
+    {
+      "senderUserId": "abcbiotech",
+      "content": "That's impressive, Anna. Can you also share what you are especially passionate about?",
+      "timestamp": "2023-03-16T12:45:00"
+    }
+  ]
+}

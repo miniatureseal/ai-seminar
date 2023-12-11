@@ -1,0 +1,26 @@
+{
+  "chatId": 30,
+  "participatingUsers": ["amueller", "bioconsult"],
+  "messages": [
+    {
+      "senderUserId": "amueller",
+      "content": "Hello! I'm intrigued by the open position at BioConsult. I graduated in Montreal but now I’m living in New York. I noticed you’re located on the west coast. Do you provide remote interviews for candidates?",
+      "timestamp": "2023-03-16T14:30:00"
+    },
+    {
+      "senderUserId": "bioconsult",
+      "content": "Hi Anna! Thanks for reaching out. We're excited about your interest in the open position at BioConsult. While our physical location is on the west coast, we absolutely understand the global nature of talent acquisition. We do offer remote interviews for candidates, ensuring a seamless and accessible process for applicants like yourself. We believe in harnessing diverse experiences, and your background, having graduated in Montreal and now residing in New York, adds an enriching dimension to our team. Looking forward to potentially connecting with you in a remote interview!",
+      "timestamp": "2023-03-16T14:35:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "Hello again! I'm really enthusiastic about the prospect of joining BioConsult. Could you share more about your company culture, and if there's one key aspect that could give me a competitive advantage in the interview process, what would it be?",
+      "timestamp": "2023-03-16T14:40:00"
+    },
+    {
+      "senderUserId": "bioconsult",
+      "content": "Hi Anna! Absolutely, our company culture revolves around a strong emphasis on teamwork. We believe collaborative efforts drive innovation and success. In interviews, showcasing your experience and proficiency in working effectively with teams would indeed be a significant advantage. Have you had previous experiences that highlight your teamwork skills?",
+      "timestamp": "2023-03-16T14:45:00"
+    }
+  ]
+}

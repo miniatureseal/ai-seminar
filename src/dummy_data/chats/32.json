@@ -1,0 +1,26 @@
+{
+  "chatId": 32,
+  "participatingUsers": ["etaylor", "Digital Innovations Ltd"],
+  "messages": [
+    {
+      "senderUserId": "etaylor",
+      "content": "Hello Digital Innovations Ltd! I'm interested in opportunities as an IT Sales Consultant. Can you share details about the role and the projects I would be involved in?",
+      "timestamp": "2023-03-16T15:30:00"
+    },
+    {
+      "senderUserId": "Digital Innovations Ltd",
+      "content": "Hi Emily! Thanks for reaching out. The IT Sales Consultant role involves strategic sales approaches for our innovative projects. Are you familiar with our company and the solutions we provide?",
+      "timestamp": "2023-03-16T15:35:00"
+    },
+    {
+      "senderUserId": "etaylor",
+      "content": "Thank you for the information! Your role aligns with my background. How does Digital Innovations approach strategic sales, and what role does the IT Sales Consultant play in project success?",
+      "timestamp": "2023-03-16T15:40:00"
+    },
+    {
+      "senderUserId": "Digital Innovations Ltd",
+      "content": "We emphasize strategic sales for project success. Can you share an example of how your strategic sales approach contributed to the success of a specific project in your previous roles?",
+      "timestamp": "2023-03-16T15:45:00"
+    }
+  ]
+}

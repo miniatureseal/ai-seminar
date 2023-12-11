@@ -1,0 +1,26 @@
+{
+  "chatId": 27,
+  "participatingUsers": ["amueller", "azyrion"],
+  "messages": [
+    {
+      "senderUserId": "amueller",
+      "content": "Hello! I'm reaching out regarding the open position at Azyrion. Can you provide more details about the role and the projects I would be involved in?",
+      "timestamp": "2023-03-16T13:00:00"
+    },
+    {
+      "senderUserId": "azyrion",
+      "content": "Hello Anna! Thank you for reaching out. Certainly, let me provide you with an overview. The open position is for a Software Development Engineer with a focus on backend systems. You would be actively involved in designing and implementing scalable solutions for our upcoming e-commerce projects. We value creativity, problem-solving skills, and the ability to work collaboratively in a fast-paced environment.",
+      "timestamp": "2023-03-16T13:05:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "Thank you very much for your quick response. Your requirements and project landscape align with my interests and my background so far! While I'm open to exploring opportunities in e-commerce, my academic background is rooted in biotechnology. I've earned a Master's in Molecular Biology and have substantial experience in assay development. However, I am eager to discuss how my skills and adaptable nature can contribute effectively to the innovative projects at Azyrion.",
+      "timestamp": "2023-03-16T13:10:00"
+    },
+    {
+      "senderUserId": "azyrion",
+      "content": "Hi Anna, thanks for your interest. We'd like to know from you what would be the earliest month for you to begin?",
+      "timestamp": "2023-03-16T13:15:00"
+    }
+  ]
+}

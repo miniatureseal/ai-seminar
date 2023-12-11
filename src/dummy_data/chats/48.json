@@ -1,0 +1,36 @@
+{
+  "chatId": 48,
+  "participatingUsers": ["David", "InnovateTech"],
+  "messages": [
+    {
+      "senderUserId": "David",
+      "content": "Hello InnovateTech! I'm interested in the company culture and work-life balance. How does your team ensure a healthy balance between work and personal life?",
+      "timestamp": "2022-07-10T13:30:00"
+    },
+    {
+      "senderUserId": "InnovateTech",
+      "content": "Hi David! Maintaining work-life balance is crucial for us. We offer flexible schedules and support employees' well-being. How do you usually manage your work-life balance?",
+      "timestamp": "2022-07-10T13:45:00"
+    },
+    {
+      "senderUserId": "David",
+      "content": "That sounds great! I believe in a balanced approach. How does your company define the ideal candidate for a role?",
+      "timestamp": "2022-07-10T14:00:00"
+    },
+    {
+      "senderUserId": "InnovateTech",
+      "content": "Good question, David! Our ideal candidate embodies a mix of technical skills, teamwork, and a passion for innovation. We appreciate well-rounded individuals. How do you align your skills and values with your career goals?",
+      "timestamp": "2022-07-10T14:15:00"
+    },
+    {
+      "senderUserId": "David",
+      "content": "I appreciate a holistic approach. It's essential to find the right fit. Before we continue, can you share specific initiatives your company takes to support employee well-being?",
+      "timestamp": "2022-07-10T14:30:00"
+    },
+    {
+      "senderUserId": "InnovateTech",
+      "content": "Absolutely, David! We have wellness programs, mental health resources, and a supportive work environment to prioritize our employees' well-being. How do these factors align with what you're looking for in a workplace?",
+      "timestamp": "2022-07-10T14:45:00"
+    }
+  ]
+}

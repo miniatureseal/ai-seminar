@@ -1,56 +1,36 @@
 {
   "chatId": 3,
-  "participatingUsers": ["amueller", "biogen"],
+  "participatingUsers": ["amueller", "genopharma"],
   "messages": [
     {
       "senderUserId": "amueller",
-      "content": "Hello, I'm eager to apply for the Biotechnology Laboratory Technician role at BioGen Research Institute. Can you tell me about the projects this role will be involved in?",
-      "timestamp": "2023-01-17T15:45:00"
+      "content": "Hello! I'm reaching out regarding the open position at GenoPharma. Can you provide more details about the role and the projects I would be involved in?",
+      "timestamp": "2023-03-01T10:00:00"
     },
     {
-      "senderUserId": "biogen",
-      "content": "Hi Anna, we're currently working on cutting-edge projects in genetics and genomics. What skills do you possess in data analysis, especially with software tools like Python and R?",
-      "timestamp": "2023-01-17T15:50:00"
-    },
-    {
-      "senderUserId": "amueller",
-      "content": "That's fascinating! I have experience in data analysis using Python and R for my research projects during my Master's program. I'd love to contribute to your research initiatives.",
-      "timestamp": "2023-01-17T15:55:00"
-    },
-    {
-      "senderUserId": "biogen",
-      "content": "Great, Anna. We also value teamwork. Can you share an example of a project where you collaborated effectively with colleagues to achieve a common goal?",
-      "timestamp": "2023-01-17T16:00:00"
+      "senderUserId": "genopharma",
+      "content": "Hi Anna! We're looking for someone with a strong background in molecular biology and experience in assay development. Can you tell me about your experience in these areas?",
+      "timestamp": "2023-03-01T10:15:00"
     },
     {
       "senderUserId": "amueller",
-      "content": "Certainly! In my previous position at the Pharmaceutical Institute, I led a team in developing a new assay for drug discovery. It involved close collaboration with researchers, and we successfully delivered the project ahead of schedule.",
-      "timestamp": "2023-01-17T16:05:00"
+      "content": "Certainly! I have a Master's in Molecular Biology and have worked on assay development during my current job at the Genetic Research Institute. I'd love to discuss my qualifications further.",
+      "timestamp": "2023-03-01T10:30:00"
     },
     {
-      "senderUserId": "biogen",
-      "content": "Impressive, Anna! We're also interested in your work preferences. What kind of projects or tasks are you most passionate about?",
-      "timestamp": "2023-01-17T16:10:00"
-    },
-    {
-      "senderUserId": "amueller",
-      "content": "I'm particularly passionate about projects that involve the application of molecular biology techniques to advance drug discovery and development. I find the intersection of research and practical applications highly rewarding.",
-      "timestamp": "2023-01-17T16:15:00"
-    },
-    {
-      "senderUserId": "biogen",
-      "content": "That's great to know, Anna. One last question for now: What salary range are you looking for in this role?",
-      "timestamp": "2023-01-17T16:20:00"
+      "senderUserId": "genopharma",
+      "content": "That's impressive, Anna. Can you also share what you are especially passionate about?",
+      "timestamp": "2023-03-01T10:45:00"
     },
     {
       "senderUserId": "amueller",
-      "content": "I'm aiming for a salary in the range of $80,000 to $90,000 per year, considering my education, skills, and experience. I believe it reflects the value I can bring to the team.",
-      "timestamp": "2023-01-17T16:25:00"
+      "content": "Absolutely! My passion lies in applying molecular biology techniques to advance drug discovery and development. I find the intersection of research and practical applications highly rewarding.",
+      "timestamp": "2023-03-01T11:00:00"
     },
     {
-      "senderUserId": "biogen",
-      "content": "Thank you for sharing that, Anna. We appreciate your transparency. We'll review your application and get back to you soon.",
-      "timestamp": "2023-01-17T16:30:00"
+      "senderUserId": "genopharma",
+      "content": "Great to know, Anna. We value passion in our team members. Looking forward to potentially having you on board!",
+      "timestamp": "2023-03-01T11:15:00"
     }
   ]
 }

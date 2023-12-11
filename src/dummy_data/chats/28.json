@@ -1,0 +1,26 @@
+{
+  "chatId": 28,
+  "participatingUsers": ["amueller", "bioelectronics"],
+  "messages": [
+    {
+      "senderUserId": "amueller",
+      "content": "Hello! I came across your offer for student assistants with a background in molecular biology and assay development. I'm interested in the position. Could you provide more details?",
+      "timestamp": "2023-03-16T13:30:00"
+    },
+    {
+      "senderUserId": "bioelectronics",
+      "content": "Hi Anna! We're thrilled about your interest in our student assistant position. As part of our dynamic team, you'll engage in cutting-edge research projects focused on molecular biology and assay development. Your role will involve hands-on laboratory work, collaborating with our interdisciplinary team, and contributing to innovative solutions in the field. Our emphasis on teamwork and the pursuit of scientific excellence creates an environment where your skills and passion for molecular biology will thrive. We look forward to discussing how you can make meaningful contributions to our research initiatives!",
+      "timestamp": "2023-03-16T13:35:00"
+    },
+    {
+      "senderUserId": "amueller",
+      "content": "Thank you for sharing this information. Based on my academic background and past work experience that sounds great for me! What are your application requirements and when is the position to be filled and for how long?",
+      "timestamp": "2023-03-16T13:40:00"
+    },
+    {
+      "senderUserId": "bioelectronics",
+      "content": "Hi amueller, we're looking for dedicated student assistants with solid knowledge in molecular biology and experience in assay development. The position is available from October 1st for a one-year contract.",
+      "timestamp": "2023-03-16T13:45:00"
+    }
+  ]
+}
