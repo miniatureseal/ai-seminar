@@ -3,6 +3,7 @@ from tkinter import scrolledtext, RIGHT, LEFT, END
 
 import json
 import uuid
+import os
 from pyprojroot.here import here
 from nltk import download
 from nltk.translate import bleu_score
@@ -11,11 +12,17 @@ from nltk.tokenize import word_tokenize
 
 class ChatInterface:
     def __init__(
-        self, root, messages, active_user, chat_id, experiment_participant_name
+        self,
+        root,
+        messages,
+        active_user,
+        chat_id,
+        experiment_participant_name,
     ):
         download("punkt")
         self.root = root
-        self.experiment_participant_name = experiment_participant_name
+        self.experiment_participant_name = experiment_participant_name.strip().lower()
+        self.last_selected_suggestion = ""
 
         self.chat_id = chat_id
         self.root.title("Smart reply chat")
@@ -99,10 +106,14 @@ class ChatInterface:
         self.chat_display.tag_configure(sender, background="#E0E0E0")
 
     def save_user_input_to_file(self, data):
-        unique_id = str(uuid.uuid4())
+        folder_path = str(here("src/output/" + self.experiment_participant_name))
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
 
-        filename = f"{unique_id}.json"
-        filepath = str(here("src/output/" + filename))
+        filename = (
+            f"participant_{self.experiment_participant_name}_chatId_{self.chat_id}.json"
+        )
+        filepath = str(here(folder_path + "/" + filename))
         with open(filepath, "w") as file:
             json.dump(data, file, indent=4)
 
