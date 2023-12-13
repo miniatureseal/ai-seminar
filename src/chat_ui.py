@@ -26,7 +26,9 @@ class ChatInterface:
 
         self.chat_id = chat_id
         self.root.title("Smart reply chat")
-        self.root.geometry("600x800")
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight()
+        root.geometry(f"{screen_width}x{screen_height}")
 
         self.chat_display = scrolledtext.ScrolledText(
             root, wrap=tk.WORD, width=80, height=30
