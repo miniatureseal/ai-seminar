@@ -2,7 +2,7 @@ import tkinter as tk
 from chat_ui import ChatInterface
 from smart_reply_chat import IntelligentChat
 from db_helper import ChromaDBHelper
-from langchain.schema.exceptions import OutputParserException
+from langchain.schema import OutputParserException
 
 
 scenarios = {
@@ -23,11 +23,6 @@ db_helper.initialize_db()
 
 for chat_id in scenarios[scenario_user]:
     active_chat = IntelligentChat(scenario_user, chat_id)
-    try:
-        smart_replies = active_chat.generate_smart_replies()
-    except OutputParserException:
-        smart_replies = ["NA"] * 3
-
     root = tk.Tk()
     chat_interface = ChatInterface(
         root,
@@ -36,7 +31,12 @@ for chat_id in scenarios[scenario_user]:
         chat_id,
         experiment_participant_name,
     )
-    chat_interface.populate_suggestions(
-        [smart_replies.reply1, smart_replies.reply2, smart_replies.reply3]
-    )
+    try:
+        smart_replies = active_chat.generate_smart_replies()
+        chat_interface.populate_suggestions(
+            [smart_replies.reply1, smart_replies.reply2, smart_replies.reply3]
+        )
+    except OutputParserException:
+        chat_interface.populate_suggestions(["NA"] * 3)
+
     root.mainloop()
