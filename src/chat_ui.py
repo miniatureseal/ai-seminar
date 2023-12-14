@@ -21,7 +21,7 @@ class ChatInterface:
     ):
         download("punkt")
         self.root = root
-        self.experiment_participant_name = experiment_participant_name.strip().lower()
+        self.experiment_participant_name = experiment_participant_name.replace(" ", "").lower()
         self.last_selected_suggestion = ""
 
         self.chat_id = chat_id
@@ -117,7 +117,7 @@ class ChatInterface:
             f"participant_{self.experiment_participant_name}_chatId_{self.chat_id}.json"
         )
         filepath = str(here(folder_path + "/" + filename))
-        with open(filepath, "w") as file:
+        with open(filepath, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
 
 

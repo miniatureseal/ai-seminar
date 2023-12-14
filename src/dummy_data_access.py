@@ -37,7 +37,7 @@ class DummyDataAccess:
             if filename.endswith(".json"):
                 file_path = os.path.join(self.chat_folder_path, filename)
 
-                with open(file_path, "r") as file:
+                with open(file_path, "r", encoding="utf-8") as file:
                     data = json.load(file)
                     chat_data.append(data)
 
@@ -48,7 +48,7 @@ class DummyDataAccess:
             self.company_profile_path, f"{user_id}.json"
         )
         if os.path.exists(company_profile_path):
-            with open(company_profile_path, "r") as file:
+            with open(company_profile_path, "r", encoding="utf-8") as file:
                 company_profile = json.load(file)
             return company_profile
 
@@ -56,7 +56,7 @@ class DummyDataAccess:
             self.job_seeker_profile_path, f"{user_id}.json"
         )
         if os.path.exists(job_seeker_profile_path):
-            with open(job_seeker_profile_path, "r") as file:
+            with open(job_seeker_profile_path, "r", encoding="utf-8") as file:
                 job_seeker_profile = json.load(file)
             return job_seeker_profile
 
@@ -65,7 +65,7 @@ class DummyDataAccess:
 
     def _read_json(self, path):
         if os.path.exists(path):
-            with open(path, "r") as file:
+            with open(path, "r", encoding="utf-8") as file:
                 data = json.load(file)
             return data
         else:
@@ -75,5 +75,5 @@ class DummyDataAccess:
         chat_id = chat_data["id"]
         chat_file_path = os.path.join(self.chat_folder_path, f"{chat_id}.json")
 
-        with open(chat_file_path, "w") as file:
+        with open(chat_file_path, "w", encoding="utf-8") as file:
             json.dump(chat_data, file, indent=2)
