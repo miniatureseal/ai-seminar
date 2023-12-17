@@ -1,25 +1,25 @@
 {
   "chatId": 29,
-  "participatingUsers": ["amueller", "techwise"],
+  "participatingUsers": ["amueller", "biotechinnovate"],
   "messages": [
     {
       "senderUserId": "amueller",
-      "content": "Hello! I'm considering applying for the IT Project Manager position at TechWise. I noticed practical experience is valued. While my background is rooted in biotechnology, I'm intrigued by the prospect of venturing into IT project management. Although I don't have extensive experience in this domain, I am eager to leverage my analytical and problem-solving skills cultivated in biotechnology to contribute effectively to your projects. Could you provide more insights into the specific expectations and skills you are looking for in a candidate?",
+      "content": "Hello! I'm considering applying for the Research Scientist position at BioTechInnovate. I noticed practical experience is valued. While my background is rooted in biotechnology, I'm intrigued by the prospect of contributing to innovative research projects. Although I don't have extensive experience in this domain, I am eager to leverage my analytical and problem-solving skills cultivated in biotechnology to contribute effectively to your projects. Could you provide more insights into the specific expectations and skills you are looking for in a candidate?",
       "timestamp": "2023-03-16T14:00:00"
     },
     {
-      "senderUserId": "techwise",
-      "content": "Hi Anna! Thank you for expressing your interest in TechWise. We highly value practical experience in IT project management, and while it can be advantageous, I want to assure you that we've successfully onboarded graduates who initially lacked extensive experience in the field. They not only adapted swiftly but also thrived in our dynamic environment. We believe that diverse skill sets contribute to our collaborative and innovative projects. Looking forward to the potential of having you on our team!",
+      "senderUserId": "biotechinnovate",
+      "content": "Hi Anna! Thank you for expressing your interest in BioTechInnovate. We highly value practical experience in molecular biology, and while it can be advantageous, I want to assure you that we've successfully onboarded graduates who initially lacked extensive experience in the field. They not only adapted swiftly but also thrived in our dynamic environment. We believe that diverse skill sets contribute to our collaborative and innovative projects. Looking forward to the potential of having you on our team!",
       "timestamp": "2023-03-16T14:05:00"
     },
     {
       "senderUserId": "amueller",
-      "content": "Hello again! I'm really enthusiastic about the prospect of joining TechWise. Could you share more about your company culture, and if there's one key aspect that could give me a competitive advantage in the interview process, what would it be?",
+      "content": "Hello again! I'm really enthusiastic about the prospect of joining BioTechInnovate. Could you share more about your company culture, and if there's one key aspect that could give me a competitive advantage in the interview process, what would it be?",
       "timestamp": "2023-03-16T14:10:00"
     },
     {
-      "senderUserId": "techwise",
-      "content": "Hi Anna! Absolutely, our company culture revolves around a strong emphasis on teamwork. We believe collaborative efforts drive innovation and success. In interviews, showcasing your experience and proficiency in working effectively with teams would indeed be a significant advantage. Have you had previous experiences that highlight your teamwork skills?",
+      "senderUserId": "biotechinnovate",
+      "content": "Hi Anna! Absolutely, our company culture revolves around a strong emphasis on collaboration. We believe that collaborative efforts drive innovation and success in our research projects. In interviews, showcasing your experience and proficiency in working effectively with teams would indeed be a significant advantage. Have you had previous experiences that highlight your teamwork skills?",
       "timestamp": "2023-03-16T14:15:00"
     }
   ]
