@@ -1,36 +1,36 @@
 {
   "chatId": 4,
-  "participatingUsers": ["amueller", "techsolutions"],
+  "participatingUsers": ["amueller", "biotechco"],
   "messages": [
-    {
-      "senderUserId": "amueller",
-      "content": "Hello! I'm reaching out about the opportunities at TechSolutions. Could you provide more insights into the available roles and the projects I could be part of?",
-      "timestamp": "2023-03-01T13:00:00"
-    },
-    {
-      "senderUserId": "techsolutions",
-      "content": "Hi Anna! We have openings for Software Development Engineers, particularly with a focus on backend systems. Your expertise in backend development aligns well with our projects. Can you share more about your availability to start?",
-      "timestamp": "2023-03-01T13:15:00"
-    },
-    {
-      "senderUserId": "amueller",
-      "content": "Thank you for the information! I'm available to start in the next month. I'm excited about the prospect of contributing to innovative backend solutions.",
-      "timestamp": "2023-03-01T13:30:00"
-    },
-    {
-      "senderUserId": "techsolutions",
-      "content": "That's great to hear, Anna! Before we proceed, could you let us know what qualities you believe contribute to successful backend development projects?",
-      "timestamp": "2023-03-01T13:45:00"
-    },
-    {
-      "senderUserId": "amueller",
-      "content": "In my experience, effective communication, problem-solving skills, and the ability to collaborate seamlessly with cross-functional teams are key. These qualities ensure the smooth development and implementation of scalable solutions.",
-      "timestamp": "2023-03-01T14:00:00"
-    },
-    {
-      "senderUserId": "techsolutions",
-      "content": "Your insights are valuable, Anna. We appreciate your interest in joining our team!",
-      "timestamp": "2023-03-01T14:15:00"
-    }
+  {
+  "senderUserId": "amueller",
+  "content": "Hello! I'm reaching out about the opportunities at BioTechCo. Could you provide more insights into the available roles and the projects I could be part of?",
+  "timestamp": "2023-03-01T13:00:00"
+  },
+  {
+  "senderUserId": "biotechco",
+  "content": "Hi Anna! We have openings for Research Scientists with a focus on molecular biology. Your expertise in molecular biology aligns well with our projects. Can you share more about your availability to start?",
+  "timestamp": "2023-03-01T13:15:00"
+  },
+  {
+  "senderUserId": "amueller",
+  "content": "Thank you for the information! I'm available to start in the next month. I'm excited about the prospect of contributing to innovative molecular biology solutions.",
+  "timestamp": "2023-03-01T13:30:00"
+  },
+  {
+  "senderUserId": "biotechco",
+  "content": "That's great to hear, Anna! Before we proceed, could you let us know what qualities you believe contribute to successful molecular biology projects?",
+  "timestamp": "2023-03-01T13:45:00"
+  },
+  {
+  "senderUserId": "amueller",
+  "content": "In my experience, attention to detail, strong analytical skills, and the ability to collaborate seamlessly with cross-functional teams are key. These qualities ensure the smooth development and implementation of impactful molecular biology solutions.",
+  "timestamp": "2023-03-01T14:00:00"
+  },
+  {
+  "senderUserId": "biotechco",
+  "content": "Your insights are valuable, Anna. We appreciate your interest in joining our molecular biology team!",
+  "timestamp": "2023-03-01T14:15:00"
+  }
   ]
-}
+  }
