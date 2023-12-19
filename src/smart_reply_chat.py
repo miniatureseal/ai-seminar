@@ -20,7 +20,7 @@ class IntelligentChat:
         set_debug(self.config.get("SETTINGS", "DEBUG"))
         self.openai_key = get_openai_key()
         chat_model = ChatOpenAI(
-            model="gpt-4-0314", openai_api_key=self.openai_key, temperature=0
+            model="gpt-4-1106-preview", openai_api_key=self.openai_key, temperature=0
         )
         self.dummy_data_access = DummyDataAccess()
         self.db_helper = ChromaDBHelper()
