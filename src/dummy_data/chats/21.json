@@ -1,6 +1,9 @@
 {
   "chatId": 21,
-  "participatingUsers": ["Emma", "GreenScape"],
+  "participatingUsers": [
+    "Emma",
+    "GreenScape"
+  ],
   "messages": [
     {
       "senderUserId": "Emma",
@@ -9,7 +12,7 @@
     },
     {
       "senderUserId": "GreenScape",
-      "content": "Hi Emma! Certainly, in our project Green Data Center we leveraged technology to [enhance soil analysis for green infrastructure projects]. How do you envision using your technical skills in a nature-focused environment like ours?",
+      "content": "Hi Emma! Your curiosity aligns with our commitment to innovation. In our recent project, the Green Data Center, we employed advanced technology to revolutionize soil analysis for green infrastructure projects. By utilizing cutting-edge sensors and data analytics, we optimized soil health assessments, allowing for more precise planning and execution of our green initiatives. How do you envision using your technical skills in a nature-focused environment like ours?",
       "timestamp": "2022-06-20T14:30:00"
     },
     {
@@ -19,7 +22,7 @@
     },
     {
       "senderUserId": "GreenScape",
-      "content": "We prioritize growth. What specific aspects of technology and career development are you most passionate about, and how can we tailor opportunities to your interests?",
+      "content": "At GreenScape, we prioritize individual growth and development. For someone keen on roles involving technology, there are diverse paths, including but not limited to Technology Integration Specialist, Sustainable IoT Solutions Developer, Environmental Tech Analyst and Green Infrastructure Technologist. How can we tailor opportunities to your specific interests and aspirations in technology and career development?",
       "timestamp": "2022-06-20T15:00:00"
     },
     {
@@ -29,17 +32,17 @@
     },
     {
       "senderUserId": "GreenScape",
-      "content": "We have initiatives like mentorship programs and collaborative projects. How do you usually approach incorporating technology into environmentally conscious projects?",
+      "content": "Great to hear about your passion, Emma! At GreenScape, we foster a supportive environment for innovation. Our initiatives include mentorship programs where experienced professionals guide and support your exploration of sustainable IoT solutions. Additionally, collaborative projects provide opportunities to work with cross-functional teams, encouraging the implementation of innovative technological solutions. How do you usually approach incorporating technology into environmentally conscious projects?",
       "timestamp": "2022-06-20T15:30:00"
     },
     {
       "senderUserId": "Emma",
-      "content": "I believe in [holistic integration, considering ecological impact. Lastly, how does GreenScape foster interest and enthusiasm among its team members for incorporating technology into projects?",
+      "content": "I believe in holistic integration, considering ecological impact. Lastly, how does GreenScape foster interest and enthusiasm among its team members for incorporating technology into projects?",
       "timestamp": "2022-06-20T15:45:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "We encourage innovation through internal tech challenges and recognition. How do you see your innovative approach aligning with our technology-driven initiatives?",
+      "content": "Maintaining interest and enthusiasm is key. At GreenScape, we encourage a culture of innovation through internal tech challenges where team members can showcase their ideas and solutions. Recognition programs celebrate achievements and contributions in the tech-driven initiatives, fostering a sense of pride and motivation. How do you see your innovative approach aligning with our technology-driven initiatives?",
       "timestamp": "2022-06-20T16:00:00"
     }
   ]
