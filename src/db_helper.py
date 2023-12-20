@@ -18,13 +18,14 @@ class ChromaDBHelper:
     def __init__(self):
         self.config = configparser.ConfigParser()
         self.config.read(here("config.ini"))
-        DB_PATH = self.config.get("SETTINGS", "DB_PATH")
         self.dummy_data_access = DummyDataAccess()
         self.openai_key = get_openai_key()
         self.embed_fct = embedding_functions.OpenAIEmbeddingFunction(
             api_key=self.openai_key, model_name="text-embedding-ada-002"
         )
-        self.vectorstore_client = chromadb.PersistentClient(path=DB_PATH)
+        self.vectorstore_client = chromadb.PersistentClient(
+            path=self.config.get("SETTINGS", "DB_PATH")
+        )
         self.message_collection = self.vectorstore_client.get_or_create_collection(
             name="chat_messages", embedding_function=self.embed_fct
         )
