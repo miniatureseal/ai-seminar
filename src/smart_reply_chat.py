@@ -118,7 +118,7 @@ class IntelligentChat:
         if len(latest_messages) == 1:
             return latest_messages[0]
 
-        return latest_messages.join(" ")
+        return " ".join(latest_messages)
 
     def _generate_prompt(self):
         if self.user_profile["role"] == "work_provider":
