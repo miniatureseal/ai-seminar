@@ -1,51 +1,21 @@
 {
   "chatId": 37,
-  "participatingUsers": ["etaylor", "InnovateTech"],
+  "participatingUsers": ["gtaylor", "InnovateTech"],
   "messages": [
     {
-      "senderUserId": "etaylor",
-      "content": "Hello! 👋 I'm Emily Taylor, and I'm eager to explore opportunities with InnovateTech Solutions. Could you share more about the exciting projects your team is currently working on?",
+      "senderUserId": "gtaylor",
+      "content": "Hello! 👋 I'm Gregosz Taylor, and I'm eager to explore opportunities with InnovateTech Solutions. Could you share more about the exciting projects your team is currently working on?",
       "timestamp": "2023-04-01T11:30:00"
     },
     {
       "senderUserId": "InnovateTech",
-      "content": "Hi Emily! 😊 We're glad you're interested. Currently, our team is engaged in cutting-edge projects involving AI and blockchain, aiming to reshape how businesses operate digitally.",
+      "content": "Hi Gregosz! 😊 We're glad you're interested. Currently, our team is engaged in cutting-edge projects involving AI and blockchain, aiming to reshape how businesses operate digitally.",
       "timestamp": "2023-04-01T11:45:00"
     },
     {
-      "senderUserId": "etaylor",
-      "content": "That's impressive! 👀 Staying at the forefront of technological advancements is important to me. How does InnovateTech Solutions support continuous learning and development for its employees?",
+      "senderUserId": "gtaylor",
+      "content": "That's impressive! 👀 Staying at the forefront of technological advancements is important to me. Can you provide insights into how the company supports work-life balance? Additionally, how would you describe the ideal candidate for your team? Excited about the prospect of contributing to your innovative projects!",
       "timestamp": "2023-04-01T12:00:00"
-    },
-    {
-      "senderUserId": "InnovateTech",
-      "content": "Great question, Emily! 🚀 We prioritize continuous learning through training sessions, mentorship, and support for attending industry conferences. We believe in empowering our team to excel in their fields.",
-      "timestamp": "2023-04-01T12:15:00"
-    },
-    {
-      "senderUserId": "etaylor",
-      "content": "Excellent! 🌟 Work-life balance is a priority for me. How does InnovateTech Solutions support employees in achieving a healthy work-life balance, especially in the fast-paced tech industry?",
-      "timestamp": "2023-04-01T12:30:00"
-    },
-    {
-      "senderUserId": "InnovateTech",
-      "content": "Absolutely, Emily! ⚖️ We understand the importance of work-life balance. Our culture emphasizes flexibility, remote work options, and initiatives for employee well-being to ensure a thriving professional and personal life.",
-      "timestamp": "2023-04-01T12:45:00"
-    },
-    {
-      "senderUserId": "etaylor",
-      "content": "That's wonderful! 😊 I appreciate your commitment. Can you also share what qualities you find most valuable in successful team members at InnovateTech Solutions?",
-      "timestamp": "2023-04-01T13:00:00"
-    },
-    {
-      "senderUserId": "InnovateTech",
-      "content": "We value collaboration, adaptability, and a passion for innovation. Successful team members thrive in a dynamic environment, contribute ideas, and collaborate effectively to bring groundbreaking projects to life.",
-      "timestamp": "2023-04-01T13:15:00"
-    },
-    {
-      "senderUserId": "etaylor",
-      "content": "Can you provide insights into how the company supports work-life balance? Additionally, how would you describe the ideal candidate for your team? Excited about the prospect of contributing to your innovative projects!",
-      "timestamp": "2023-04-01T13:30:00"
     }
   ]
 }

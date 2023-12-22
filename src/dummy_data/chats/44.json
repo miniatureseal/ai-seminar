@@ -4,37 +4,27 @@
   "messages": [
     {
       "senderUserId": "kpatel",
-      "content": "Hello GreenScape Solutions! I'm enthusiastic about environmentally conscious projects. Can you provide insights into the company's culture and how it supports employee well-being?",
-      "timestamp": "2023-04-03T15:45:00"
+      "content": "Hello GreenScape Solutions! I'm impressed by your commitment to environmental initiatives. Can you share more about the specific projects GreenScape has undertaken in this regard?",
+      "timestamp": "2023-04-03T13:30:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "Hello kpatel! We prioritize a supportive culture valuing work-life balance. Any specific aspects of employee well-being you're particularly interested in?",
-      "timestamp": "2023-04-03T16:00:00"
+      "content": "Greetings Kevin! We've worked on diverse projects, such as urban reforestation and sustainable water management. Any particular environmental aspect you're passionate about?",
+      "timestamp": "2023-04-03T13:45:00"
     },
     {
       "senderUserId": "kpatel",
-      "content": "That's great to hear! I'm particularly interested in initiatives that support mental well-being. How does GreenScape foster a positive work environment in this regard?",
-      "timestamp": "2023-04-03T16:15:00"
+      "content": "That's fantastic! I'm particularly passionate about sustainable water management. Can you provide more details on how GreenScape approaches such projects?",
+      "timestamp": "2023-04-03T14:00:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "We promote mental well-being through flexible schedules and wellness programs. How do you prioritize and contribute to a healthy work-life balance in your professional life?",
-      "timestamp": "2023-04-03T16:30:00"
+      "content": "Certainly! We implement green infrastructure for water conservation. This includes rain gardens, green roofs, and permeable pavements. We also work with local communities to raise awareness about water conservation. We're currently working on a project to install rain gardens in the city of Darmstadt.",
+      "timestamp": "2023-04-03T14:15:00"
     },
     {
       "senderUserId": "kpatel",
-      "content": "I believe in maintaining a balance for a healthy work-life. Additionally, what initiatives does GreenScape have for professional development? Excited about the prospect of contributing to your environmentally conscious projects!",
-      "timestamp": "2023-04-03T16:45:00"
-    },
-    {
-      "senderUserId": "GreenScape",
-      "content": "Excellent question, kpatel! We offer various development programs to support career growth. How do you envision your professional development aligning with our environmentally conscious projects?",
-      "timestamp": "2023-04-03T17:00:00"
-    },
-    {
-      "senderUserId": "kpatel",
-      "content": "I'm excited about the prospect of contributing to environmentally conscious projects. How does GreenScape support employee well-being and foster a positive work environment?",
+      "content": "I love that you also have awareness initiatives! I am excited about the prospect of contributing to environmentally conscious projects. How does GreenScape support employee well-being and foster a positive work environment?",
       "timestamp": "2023-04-03T17:15:00"
     }
   ]

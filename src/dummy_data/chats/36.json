@@ -1,14 +1,19 @@
 {
   "chatId": 36,
-  "participatingUsers": ["amueller", "InnovateTech"],
+  "participatingUsers": ["dkrause", "InnovateTech"],
   "messages": [
+    {
+      "senderUserId": "dkrause",
+      "content": "Hi, InnovateTech! 👋 I'm Daniel, a software engineer with 5 years of experience. I'm interested in joining your team. Could you tell me more about the company culture at InnovateTech Solutions?",
+      "timestamp": "2023-04-01T10:15:00"
+    },
     {
       "senderUserId": "InnovateTech",
       "content": "Great to hear that, Anna! 🚀 We prioritize continuous learning and development through regular training sessions, mentorship programs, and encouraging our team to attend industry conferences. We believe in empowering our employees to stay ahead in their respective fields.",
       "timestamp": "2023-04-01T10:00:00"
     },
     {
-      "senderUserId": "amueller",
+      "senderUserId": "dkrause",
       "content": "Excellent! 🌟 Work-life balance is crucial to me as well. How does InnovateTech Solutions support its employees in achieving a healthy work-life balance, especially in the fast-paced tech industry?",
       "timestamp": "2023-04-01T10:15:00"
     },
@@ -18,7 +23,7 @@
       "timestamp": "2023-04-01T10:30:00"
     },
     {
-      "senderUserId": "amueller",
+      "senderUserId": "dkrause",
       "content": "That's wonderful! 😊 I appreciate your openness. Can you also shed light on what qualities you find most valuable in successful team members at InnovateTech Solutions?",
       "timestamp": "2023-04-01T10:45:00"
     },
@@ -28,8 +33,8 @@
       "timestamp": "2023-04-01T11:00:00"
     },
     {
-      "senderUserId": "amueller",
-      "content": "Could you share more about the company's remote work policy? Additionally, what qualities do you find most valuable in successful team members? Looking forward to potentially joining your innovative team!",
+      "senderUserId": "dkrause",
+      "content": "Could you share more about the company's remote work policy? Additionally, what qualities do you find most valuable in successful team members?",
       "timestamp": "2023-04-01T11:15:00"
     }
   ]

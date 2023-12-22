@@ -4,22 +4,22 @@
   "messages": [
     {
       "senderUserId": "etaylor",
-      "content": "Hello Innotech Dynamics! I'm Emily, an IT Sales Consultant interested in your open positions. Can you provide details about the role and the projects I would be involved in?",
+      "content": "Hello Innotech Dynamics! I'm Emily, and I am interested in your open position as an IT Sales Consultant. Can you provide details about the role and the projects I would be involved in?",
       "timestamp": "2023-03-16T16:00:00"
     },
     {
       "senderUserId": "Innotech Dynamics",
-      "content": "Hi Emily! Thanks for reaching out. The IT Sales Consultant role here involves dynamic projects. Are you familiar with our company and the technological solutions we offer?",
+      "content": "Hi Emily! Thanks for reaching out. The IT Sales Consultants are responsible for helping us bring our manufacturing resource planing software to our customer. We're looking for someone who can work with our clients to develop and implement our innovative technological solutions. Currently we are working on an implementation project together with a large car manufacturer. Does this sound like something you'd be interested in?",
       "timestamp": "2023-03-16T16:05:00"
     },
     {
       "senderUserId": "etaylor",
-      "content": "Thank you for the information! Your dynamic projects align with my background. How does Innotech Dynamics integrate innovative technologies, and what role does the IT Sales Consultant play in driving technological solutions?",
+      "content": "Yes, I am very much interested in it, thank you for the information! Your projects align with my background. How does Innotech Dynamics integrate innovative technologies, and what role does the IT Sales Consultant play in driving technological solutions?",
       "timestamp": "2023-03-16T16:10:00"
     },
     {
       "senderUserId": "Innotech Dynamics",
-      "content": "We're all about innovation. Can you share an example of how you've contributed to the adoption of innovative technologies in your previous roles?",
+      "content": "We're all about innovation and its crucial to our services to offer the customers the best possible and cutting-edge solution and service we possibly can. Can you share an example of how you've contributed to the adoption of innovative technologies in your previous roles?",
       "timestamp": "2023-03-16T16:15:00"
     }
   ]

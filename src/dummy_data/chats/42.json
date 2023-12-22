@@ -4,42 +4,22 @@
   "messages": [
     {
       "senderUserId": "cmartin",
-      "content": "Hello GreenScape Solutions! I'm interested in how your consultancy integrates technology into sustainable urban planning. Can you provide insights into this aspect of your work?",
+      "content": "Hello GreenScape Solutions! I'm interested in how your consultancy integrates technology into sustainable urban planning. While working with such cutting edge technologies, how do you manage to stay up to date with your knowledge?",
       "timestamp": "2023-04-03T11:15:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "Hello cmartin! We leverage technology for data-driven urban planning, enhancing sustainability. Drones, GIS, and smart city solutions play a crucial role. Any specific technologies you find intriguing?",
-      "timestamp": "2023-04-03T11:30:00"
-    },
-    {
-      "senderUserId": "cmartin",
-      "content": "That sounds fascinating! I'm particularly intrigued by GIS applications. Can you share examples of how GIS contributes to your sustainable urban planning projects?",
-      "timestamp": "2023-04-03T11:45:00"
-    },
-    {
-      "senderUserId": "GreenScape",
-      "content": "Certainly! GIS aids in mapping green spaces, optimizing resource use, and analyzing environmental impact. How do you envision applying your interest in technology to contribute to our projects?",
-      "timestamp": "2023-04-03T12:00:00"
-    },
-    {
-      "senderUserId": "cmartin",
-      "content": "I see great potential in applying technology for efficient urban planning. Regarding career development, what opportunities does GreenScape offer for professional growth and advancement?",
-      "timestamp": "2023-04-03T12:15:00"
-    },
-    {
-      "senderUserId": "GreenScape",
-      "content": "Great question, cmartin! We prioritize continuous learning through workshops and encourage participation in relevant conferences. How do you envision your career development aligning with our innovative projects?",
+      "content": "Great question, Clark! We prioritize continuous learning through workshops and encourage participation in relevant conferences.",
       "timestamp": "2023-04-03T12:30:00"
     },
     {
       "senderUserId": "cmartin",
-      "content": "Your commitment to continuous learning aligns well with my career goals. I'm excited about the possibility of contributing to your team. How does GreenScape foster a collaborative and innovative work environment?",
+      "content": "I love attending conferences and see all the new cutting edge technology. I'm also excited about the possibility of contributing to your team. How does GreenScape foster a collaborative and innovative work environment?",
       "timestamp": "2023-04-03T12:45:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "We foster collaboration through open communication and innovation through idea-sharing sessions. How do you typically contribute to a collaborative and innovative team?",
+      "content": "We foster collaboration through open communication and innovation through idea-sharing sessions. We also have a great team of people who are passionate about their work and are always willing to help each other out! Furthermore, we have team building events such as hackathons and retreats that help us bond as a team.",
       "timestamp": "2023-04-03T13:00:00"
     },
     {
