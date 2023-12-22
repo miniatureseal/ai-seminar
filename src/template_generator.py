@@ -7,7 +7,10 @@ class TemplateGenerator:
         "{introduction}\n\n" + "{context_placeholder}\n\n" + "{start}\n\n" + "{format}"
     )
 
-    _PROMPT_INTRODUCTION = "Your job is it to produce possible chat replies for the user {active_user_id} while taking into consideration additonal data which is provided below.\n"
+    _PROMPT_INTRODUCTION = (
+        "Generate three possible replies user {active_user_id} could write taking into consideration the chat so far, as well as the relevant messages provided from previous chats.\n"
+        "Take into consideration the users writing style so far. Each generated reply should address all questions and open points of the message which should be replied to. The replies should not include information already written in the chat so far.\n\n"
+    )
 
     _PROMPT_START = (
         "Relevant messages from previous chats:"
@@ -22,8 +25,6 @@ class TemplateGenerator:
         "------------\n"
         "{message_to_reply_to}\n"
         "------------\n"
-        "Generate three possible replies user {active_user_id} could write taking into consideration the chat so far, as well as the relevant messages provided from previous chats.\n"
-        "Take into consideration the users writing style so far. Each generated reply should address all questions and open points of the message which should be replied to. The replies should not include information already written in the chat so far. Keep the answer short.\n\n"
     )
 
     _CONTEXT_INFO_COMPANY = "User {active_user_id} is a representant of a company and is seeking people to hire for a job.\n"
