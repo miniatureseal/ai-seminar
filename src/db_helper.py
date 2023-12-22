@@ -7,6 +7,7 @@ from chromadb.utils import embedding_functions
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from dummy_data_access import DummyDataAccess
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from pyprojroot.here import here
 
 
@@ -29,6 +30,10 @@ class ChromaDBHelper:
         self.message_collection = self.vectorstore_client.get_or_create_collection(
             name="chat_messages", embedding_function=self.embed_fct
         )
+        self.text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=300,
+            chunk_overlap=20,
+        )
 
     def initialize_db(self):
         """
@@ -42,14 +47,16 @@ class ChromaDBHelper:
 
         for chat_data in self.dummy_data_access.read_chat_data():
             for message in chat_data["messages"]:
-                chat_messages.append(message["content"])
-                chat_message_metadata.append(
-                    {
-                        "user": message["senderUserId"],
-                        "chat_id": chat_data["chatId"],
-                        "timestamp": message["timestamp"],
-                    }
-                )
+                splitted_message = self.text_splitter.split_text(message["content"])
+                chat_messages.extend(splitted_message)
+                for _ in range(len(splitted_message)):
+                    chat_message_metadata.append(
+                        {
+                            "user": message["senderUserId"],
+                            "chat_id": chat_data["chatId"],
+                            "timestamp": message["timestamp"],
+                        }
+                    )
 
         ids = [str(uuid.uuid5(uuid.NAMESPACE_DNS, doc)) for doc in chat_messages]
         unique_ids = list(set(ids))
