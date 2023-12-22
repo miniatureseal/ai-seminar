@@ -38,5 +38,5 @@ for chat_id in scenarios[scenario_user]:
         )
     except OutputParserException:
         chat_interface.populate_suggestions(["NA"] * 3)
-
+    root.update_idletasks()
     root.mainloop()
