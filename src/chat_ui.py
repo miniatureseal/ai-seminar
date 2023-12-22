@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import scrolledtext, RIGHT, LEFT
 
 import json
-import time
 import os
 from pyprojroot.here import here
 from nltk import download
@@ -21,7 +20,9 @@ class ChatInterface:
     ):
         download("punkt")
         self.root = root
-        self.experiment_participant_name = experiment_participant_name.replace(" ", "").lower()
+        self.experiment_participant_name = experiment_participant_name.replace(
+            " ", ""
+        ).lower()
         self.last_selected_suggestion = ""
 
         self.chat_id = chat_id
@@ -121,7 +122,6 @@ class ChatInterface:
             json.dump(data, file, indent=4)
 
 
-# Dummy code for testing out the UI
 if __name__ == "__main__":
     messages_data = [
         {
