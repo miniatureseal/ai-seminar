@@ -4,6 +4,11 @@ from pyprojroot.here import here
 
 
 class DummyDataAccess:
+    """
+    Simple class to read the chat and profile dummy data from the file system.
+    Dummy data can be found in the folder src/dummy_data.
+    """
+
     def __init__(self):
         self.chat_folder_path = str(here("src/dummy_data/chats"))
         self.company_profile_path = str(here("src/dummy_data/company_profiles"))

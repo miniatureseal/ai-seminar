@@ -6,7 +6,6 @@ from db_helper import ChromaDBHelper
 
 import configparser
 from pyprojroot.here import here
-from datetime import datetime
 from langchain.chat_models import ChatOpenAI
 from langchain.output_parsers import PydanticOutputParser
 from langchain.globals import set_debug
@@ -15,6 +14,13 @@ from langchain_core.runnables import RunnableLambda
 
 
 class IntelligentChat:
+    """
+    Heartpiece of the chatbot. This class is responsible for generating smart replies.
+    It takes the chat user and the current active chat id and initializes the smart
+    reply langchain. It also acts as the data layer to the chat UI and handles
+    the loading of the dummy data for the given chat and chat actors.
+    """
+
     def __init__(self, chat_user, active_chat_id):
         self.config = configparser.ConfigParser()
         self.config.read(here("config.ini"))
@@ -38,9 +44,7 @@ class IntelligentChat:
         self.active_chat_id = active_chat_id
         self.active_chat = self.context_chats.pop(active_chat_id, None)
         self.chat_partner_user_id = self._get_chat_partner_id()
-        self.retriever = self.db_helper.get_langchain_retriever(
-            self.chat_user, self.active_chat_id
-        )
+
         self.rag_chain = (
             {
                 "previous_chat_context": {
@@ -131,6 +135,3 @@ class IntelligentChat:
 
         if self.user_profile["role"] == "job_seeker":
             return self.template_generator.get_job_seeker_prompt_template()
-
-    def _persist_chat(self):
-        self.dummy_data_access.persist_chat(self.active_chat)
