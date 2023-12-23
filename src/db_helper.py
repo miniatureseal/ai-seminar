@@ -28,11 +28,13 @@ class ChromaDBHelper:
             path=self.config.get("SETTINGS", "DB_PATH")
         )
         self.message_collection = self.vectorstore_client.get_or_create_collection(
-            name="chat_messages", embedding_function=self.embed_fct
+            name="chat_messages",
+            embedding_function=self.embed_fct,
+            metadata={"hnsw:space": "cosine"},
         )
         self.text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=300,
-            chunk_overlap=20,
+            chunk_size=int(self.config.get("INFO_RETRIEVAL", "CHUNK_SIZE")),
+            chunk_overlap=int(self.config.get("INFO_RETRIEVAL", "CHUNK_OVERLAP")),
         )
 
     def initialize_db(self):
