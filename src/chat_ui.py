@@ -7,25 +7,28 @@ from pyprojroot.here import here
 from nltk import download
 from nltk.translate import bleu_score
 from nltk.tokenize import word_tokenize
+from smart_reply_chat import IntelligentChat
+from langchain.schema import OutputParserException
 
 
 class ChatInterface:
     def __init__(
         self,
         root,
-        messages,
         active_user,
-        chat_id,
+        chat_ids,
         experiment_participant_name,
     ):
         download("punkt")
-        self.root = root
         self.experiment_participant_name = experiment_participant_name.replace(
             " ", ""
         ).lower()
         self.last_selected_suggestion = ""
+        self.current_chat_index = 0
+        self.active_user = active_user
+        self.chat_ids = chat_ids
 
-        self.chat_id = chat_id
+        self.root = root
         self.root.title("Smart reply chat")
         screen_width = root.winfo_screenwidth()
         screen_height = root.winfo_screenheight()
@@ -42,7 +45,7 @@ class ChatInterface:
             text.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
             text.bind(
                 "<ButtonRelease-1>",
-                lambda event, index=i: self.insert_suggestion(event, index),
+                lambda event, index=i: self.insert_suggestion(event),
             )
             self.suggestion_texts.append(text)
 
@@ -54,8 +57,31 @@ class ChatInterface:
 
         self.send_button = tk.Button(root, text="Send", command=self.send_message)
         self.send_button.pack(pady=5)
+        self.load_chat_from_index()
 
-        self.display_messages(messages, active_user)
+    def load_chat_from_index(self):
+        self._show_loading_status()
+
+        active_chat = IntelligentChat(
+            self.active_user, self.chat_ids[self.current_chat_index]
+        )
+        self.display_messages(active_chat.get_message_data(), self.active_user)
+        try:
+            smart_replies = active_chat.generate_smart_replies()
+            self.populate_suggestions(
+                [smart_replies.reply1, smart_replies.reply2, smart_replies.reply3]
+            )
+        except OutputParserException:
+            self.populate_suggestions(["NA"] * 3)
+
+    def _show_loading_status(self):
+        self.chat_display.delete("1.0", tk.END)
+        self.chat_display.insert(tk.END, "Please wait, the chat is loading...")
+
+        for i in range(3):
+            suggestion = self.suggestion_texts[i]
+            suggestion.delete("1.0", tk.END)
+            suggestion.insert(tk.END, "Please wait, the chat is loading...")
 
     def send_message(self):
         message = self.entry_field.get("1.0", tk.END).strip()
@@ -69,17 +95,23 @@ class ChatInterface:
         self.save_user_input_to_file(
             {
                 "written_by": self.experiment_participant_name,
-                "chat_id": self.chat_id,
+                "chat_id": self.chat_ids[self.current_chat_index],
                 "chosen_suggestion": self.last_selected_suggestion,
                 "written_message": message,
                 "bleu_score": bleu_result,
             }
         )
 
-        self.send_button.config(state="disabled")
+        self.last_selected_suggestion = ""
+        self.current_chat_index += 1
         self.entry_field.delete("1.0", tk.END)
-        self.entry_field.insert(tk.END, "Thank you for taking part in the experiment!")
-        self.root.destroy()
+        if self.current_chat_index < len(self.chat_ids):
+            self.load_chat_from_index()
+        else:
+            self.send_button.config(state="disabled")
+            self.entry_field.insert(
+                tk.END, "Thank you for taking part in the experiment!"
+            )
 
     def populate_suggestions(self, suggestions):
         if len(suggestions) == len(self.suggestion_texts):
@@ -88,7 +120,7 @@ class ChatInterface:
                 text.delete("1.0", tk.END)
                 text.insert(tk.END, suggestion)
 
-    def insert_suggestion(self, event, suggestion_number):
+    def insert_suggestion(self, event):
         selected_suggestion = event.widget.get("1.0", tk.END).strip()
 
         self.last_selected_suggestion = selected_suggestion
@@ -97,6 +129,7 @@ class ChatInterface:
         self.entry_field.insert(tk.END, selected_suggestion)
 
     def display_messages(self, messages, active_user):
+        self.chat_display.delete("1.0", tk.END)
         for message in messages:
             sender = message["senderUserId"]
             content = message["content"]
@@ -114,47 +147,7 @@ class ChatInterface:
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
-        filename = (
-            f"participant_{self.experiment_participant_name}_chatId_{self.chat_id}.json"
-        )
+        filename = f"participant_{self.experiment_participant_name}_chatId_{self.chat_ids[self.current_chat_index]}.json"
         filepath = str(here(folder_path + "/" + filename))
         with open(filepath, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
-
-
-if __name__ == "__main__":
-    messages_data = [
-        {
-            "senderUserId": "amueller",
-            "content": "Hello, I'm interested in the job.",
-            "timestamp": "2023-01-15T14:30:00",
-        },
-        {
-            "senderUserId": "company",
-            "content": "Hello, tell me about your experience.",
-            "timestamp": "2023-01-15T14:35:00",
-        },
-        {
-            "senderUserId": "amueller",
-            "content": "I have a Master's in Biology.",
-            "timestamp": "2023-01-15T14:40:00",
-        },
-        {
-            "senderUserId": "company",
-            "content": "Impressive! What are you passionate about?",
-            "timestamp": "2023-01-15T14:45:00",
-        },
-    ]
-
-    active_user = "amueller"
-
-    suggestions = [
-        "I'm very passionate about applying molecular biology techniques to advance drug discovery and development. The intersection of research and practical applications is highly rewarding for me.",
-        "I have experience in data analysis using Python and R for my research projects during my Master's program. I would love to contribute to your research initiatives.",
-        "In my previous position at the Pharmaceutical Institute, I successfully led a team in developing a new assay for drug discovery. We collaborated closely with researchers and delivered the project ahead of schedule.",
-    ]
-
-    root = tk.Tk()
-    chat_interface = ChatInterface(root, messages_data, active_user)
-    chat_interface.populate_suggestions(suggestions)
-    root.mainloop()
