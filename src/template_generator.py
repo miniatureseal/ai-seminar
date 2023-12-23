@@ -8,12 +8,12 @@ class TemplateGenerator:
     )
 
     _PROMPT_INTRODUCTION = (
-        "Generate three possible replies user {active_user_id} could write taking into consideration the chat so far, as well as the relevant messages provided from previous chats.\n"
-        "Take into consideration the users writing style so far. Each generated reply should address all questions and open points of the message which should be replied to. The replies should not include information already written in the chat so far.\n\n"
+        "Generate three possible replies user {active_user_id} could write taking into consideration the chat so far, as well as the information of the context messages provided from previous chats.\n"
+        "Each generated reply should address all questions and open points of the message which should be replied to. The replies should only include relevant information which is known through the context messages from previous chats and is needed to answer the text. Don't make up new information. The replies should not include information already written in the chat so far. Take into consideration the users {active_user_id} writing style as well.\n\n"
     )
 
     _PROMPT_START = (
-        "Relevant messages from previous chats:"
+        "Context messages from previous chats:"
         "------------\n"
         "{previous_chat_context}\n"
         "------------\n"
