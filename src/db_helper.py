@@ -1,19 +1,21 @@
 import configparser
-from openai_key_retrieval import get_openai_key
-
 import chromadb
 import uuid
+
 from chromadb.utils import embedding_functions
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
-from dummy_data_access import DummyDataAccess
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from pyprojroot.here import here
+
+from openai_key_retrieval import get_openai_key
+from dummy_data_access import DummyDataAccess
 
 
 class ChromaDBHelper:
     """
-    This class serves as an interface to load and reset the dummy test data!
+    This class serves as an interface to load and reset the dummy test data into the
+    ChromaDB vector store.
     """
 
     def __init__(self):
@@ -86,35 +88,11 @@ class ChromaDBHelper:
                 ids=ids_to_add, documents=docs_to_add, metadatas=metadata_to_add
             )
 
-    def get_langchain_retriever(self, chat_user, active_chat_id):
-        """
-        Usage depricated, as similarity_search_with_relevance_scores delivers better results but somehow can't be called in the context of a retriever, so now mainly similarity_search_with_relevance_scores is used and this function only serves development purposes
-        """
-        langchain_chroma = Chroma(
-            client=self.vectorstore_client,
-            collection_name="chat_messages",
-            embedding_function=OpenAIEmbeddings(openai_api_key=self.openai_key),
-        )
-
-        filter = {
-            "$and": [
-                {"user": {"$eq": chat_user}},
-                {"chat_id": {"$ne": int(active_chat_id)}},
-            ]
-        }
-
-        return langchain_chroma.as_retriever(
-            search_type="similarity_score_threshold",
-            search_kwargs={
-                "score_threshold": float(
-                    self.config.get("SETTINGS", "SIMILARITY_THRESHOLD")
-                ),
-                "k": int(self.config.get("SETTINGS", "TOP_K_SIM_MESSAGES_RETURNED")),
-                "filter": filter,
-            },
-        )
-
     def similarity_search_with_relevance_scores(self, query, chat_user, active_chat_id):
+        """
+        Retrieves chat message from other texts which might be helpful in answering the
+        given chat message.
+        """
         langchain_chroma = Chroma(
             client=self.vectorstore_client,
             collection_name="chat_messages",
