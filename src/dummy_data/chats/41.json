@@ -4,17 +4,17 @@
   "messages": [
     {
       "senderUserId": "jjackson",
-      "content": "Hello GreenScape Solutions! I've been exploring your commitment to sustainable urban development and I would be interested in joining your company! Can you share more about the initiatives involving communities in your projects?",
+      "content": "Hello GreenScape Solutions! I've been exploring your commitment to sustainable urban planning and I would be interested in joining your company! Can you share more about your companies vision?",
       "timestamp": "2023-04-03T09:00:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "Greetings jjackson! Absolutely, we prioritize community involvement through workshops and collaborative planning. It's integral to our sustainable approach. What are you especially passionate about?",
+      "content": "Greetings jjackson! Absolutely, we want to achive a positive change for the environment through urban planning. It's integral to our sustainable approach. What are you especially passionate about?",
       "timestamp": "2023-04-03T09:15:00"
     },
     {
       "senderUserId": "jjackson",
-      "content": "I'm passionate about community engagement and envision contributing through effective collaboration and innovative ideas. Additionally, how does GreenScape support its employees in personal development?",
+      "content": "I'm passionate about engaging with local community and envision contributing through effective collaboration and cutting-edge urban planning approaches. Additionally, how does GreenScape support its employees in personal development?",
       "timestamp": "2023-04-03T10:00:00"
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "senderUserId": "jjackson",
-      "content": "I'm excited about the prospect of contributing to your sustainable urban development projects! Can you share more about the initiatives GreenScape takes to involve communities in your projects? Also, what qualities do you value most in team members?",
+      "content": "I'm excited about the prospect of contributing to your sustainable urban planning projects! What qualities do you value most in team members?",
       "timestamp": "2023-04-03T11:00:00"
     }
   ]

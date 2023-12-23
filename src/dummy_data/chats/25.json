@@ -4,18 +4,8 @@
   "messages": [
     {
       "senderUserId": "Taylor",
-      "content": "Hi GreenScape Solutions! I'm interested in the career paths your company offers. Could you provide insights into the typical career trajectories employees follow at GreenScape Solutions?",
+      "content": "Hi GreenScape Solutions! I'm interested in the career paths your company offers. Could you provide insights into the how GreenScape Solution supports creativity of employees?",
       "timestamp": "2023-03-15T23:20:00"
-    },
-    {
-      "senderUserId": "GreenScape",
-      "content": "Hi Taylor! Our typical career paths involve progressing from Junior Associate to Senior Specialist and beyond, with opportunities for leadership roles. Of course this trajectory also varies based on your area which you work in and can be refit to your own personal preferences. What are you looking for in a career path?",
-      "timestamp": "2023-03-15T23:25:00"
-    },
-    {
-      "senderUserId": "Taylor",
-      "content": "That sounds very interesting to me. I envision introducing innovative solutions and collaborating with cross-functional teams. I especially love to think creatively and a bit out of the box. How does GreenScape recognize and reward creative contributions from team members?",
-      "timestamp": "2023-03-15T23:50:00"
     },
     {
       "senderUserId": "GreenScape",

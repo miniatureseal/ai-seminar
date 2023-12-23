@@ -7,12 +7,12 @@
   "messages": [
     {
       "senderUserId": "Sophia",
-      "content": "Hi GreenScape Solutions! Your focus on green infrastructure caught my eye. Could you share a notable project where GreenScape excelled in implementing green infrastructure?",
+      "content": "Hi GreenScape Solutions! Your focus on green urban planning caught my eye. Could you share a notable project where GreenScape excelled in implementing green infrastructure?",
       "timestamp": "2023-03-15T22:00:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "Hi Sophia! Absolutely, one notable project is Project Oasis. In this initiative, we designed and implemented a sustainable green roof system in the heart of the city. The green roof not only enhanced the aesthetic appeal of the urban landscape but also provided ecological benefits, such as improved air quality and temperature regulation. How does your interest in green infrastructure align with our company's initiatives?",
+      "content": "Hi Sophia! Absolutely, one notable project is Project Oasis. In this initiative, we collaborated with traffic infrastructure planners to redesigned a major throughfare road to make public transport more punctual and encourage people to walk more, leading to a 20% increase in pedestrian traffic lowering car traffic and emissions considerably! How does your interest in green infrastructure align with our company's initiatives?",
       "timestamp": "2023-03-15T22:05:00"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "senderUserId": "GreenScape",
-      "content": "Our company culture is a blend of collaboration, innovation, and environmental consciousness. We foster an environment where ideas are exchanged freely, innovation is encouraged, and every action is driven by a commitment to environmental sustainability. How have you contributed to fostering a positive company culture in your previous roles?",
+      "content": "Our company culture is a blend of collaboration, innovation, and environmental consciousness. We foster an environment where ideas are exchanged freely and every action is driven by a commitment to environmental sustainability. How have you contributed to fostering a positive company culture in your previous roles?",
       "timestamp": "2023-03-15T22:15:00"
     },
     {
@@ -37,18 +37,13 @@
     },
     {
       "senderUserId": "Sophia",
-      "content": "What excites me the most is the opportunity to contribute to creating sustainable urban spaces that benefit both people and the environment. The prospect of combining creativity with environmental impact is truly motivating.",
+      "content": "What excites me the most is the opportunity to contribute to sustainable projects from which both people and the environment can benefit. The prospect of combining creativity with environmental impact is truly motivating.",
       "timestamp": "2023-03-15T22:30:00"
     },
     {
       "senderUserId": "GreenScape",
-      "content": "We totally understand you Sophia! We are also excited about creating sustainable urban spaces that benefit both people and the environment. How do you envision channeling your excitement into making a positive impact on our green infrastructure projects?",
+      "content": "We totally understand you Sophia! How do you envision channeling your excitement into making a positive impact on our green infrastructure projects?",
       "timestamp": "2023-03-15T22:35:00"
-    },
-    {
-      "senderUserId": "Sophia",
-      "content": "I envision bringing creative solutions and enthusiasm to enhance the sustainability of urban areas. Whether it's exploring innovative materials, implementing green design principles, or collaborating with diverse stakeholders, I'm eager to contribute to making our urban spaces more environmentally friendly and resilient.",
-      "timestamp": "2023-03-15T22:40:00"
     }
   ]
 }
