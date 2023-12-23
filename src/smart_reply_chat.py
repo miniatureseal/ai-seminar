@@ -11,6 +11,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.output_parsers import PydanticOutputParser
 from langchain.globals import set_debug
 from operator import itemgetter
+from langchain_core.runnables import RunnableLambda
 
 
 class IntelligentChat:
@@ -37,13 +38,17 @@ class IntelligentChat:
         self.active_chat_id = active_chat_id
         self.active_chat = self.context_chats.pop(active_chat_id, None)
         self.chat_partner_user_id = self._get_chat_partner_id()
-        retriever = self.db_helper.get_langchain_retriever(
+        self.retriever = self.db_helper.get_langchain_retriever(
             self.chat_user, self.active_chat_id
         )
         self.rag_chain = (
             {
-                "previous_chat_context": itemgetter("message_to_reply_to")
-                | retriever
+                "previous_chat_context": {
+                    "message_to_reply_to": itemgetter("message_to_reply_to"),
+                    "chat_user": itemgetter("active_user_id"),
+                    "active_chat_id": itemgetter("active_chat_id"),
+                }
+                | RunnableLambda(self._call_retriever)
                 | self._format_docs,
                 "active_user_id": itemgetter("active_user_id"),
                 "chat_history": itemgetter("chat_history"),
@@ -55,19 +60,10 @@ class IntelligentChat:
             | self.output_parser
         )
 
-    def add_message(self, message):
-        new_message = {
-            "senderUserId": self.chat_user,
-            "content": message,
-            "timestamp": datetime.now().isoformat(),
-        }
-        self.active_chat["messages"].append(new_message)
-        self.vectorstore.add_documents([new_message])
-
     def _get_chat_partner_id(self):
         participating_user = self.active_chat["participatingUsers"]
 
-        if "amueller" in participating_user:
+        if self.chat_user in participating_user:
             participating_user.remove(self.chat_user)
 
         return participating_user[0]
@@ -79,6 +75,7 @@ class IntelligentChat:
                 "chat_history": self.active_chat["messages"],
                 "active_user_id": self.chat_user,
                 "chat_partner_user_id": self.chat_partner_user_id,
+                "active_chat_id": self.active_chat_id,
             }
         )
 
@@ -86,7 +83,15 @@ class IntelligentChat:
         return self.active_chat["messages"]
 
     def _format_docs(self, docs):
-        return [doc.page_content for doc in docs]
+        return [doc[0].page_content for doc in docs]
+
+    def _call_retriever(self, relevant_data):
+        results = self.db_helper.similarity_search_with_relevance_scores(
+            relevant_data["message_to_reply_to"],
+            relevant_data["chat_user"],
+            relevant_data["active_chat_id"],
+        )
+        return results
 
     def _get_message_to_reply_to(self):
         message = max(
