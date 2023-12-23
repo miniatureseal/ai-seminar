@@ -4,42 +4,32 @@
 "messages": [
 {
 "senderUserId": "David",
-"content": "Hi GreenScape Solutions! I'm intrigued by your emphasis on technology integration. Could you share a specific project where technology played a crucial role in your initiatives?",
+"content": "Hi GreenScape Solutions! I'm intrigued by your emphasis on new urban planning approaches in an environmentally sustainable context. Could you share a specific project where technology played a crucial role in your initiatives?",
 "timestamp": "2022-06-20T16:15:00"
 },
 {
 "senderUserId": "GreenScape",
-"content": "Hi David! Your curiosity aligns with our commitment to leveraging technology for positive impact. In a recent bio-diversity project, we employed technology to monitor and analyze biodiversity patterns. Advanced sensors, data analytics, and real-time monitoring were integral to understanding and preserving the delicate balance of ecosystems. How do you see your technical skills contributing to such projects?",
+"content": "Hi David! In a recent urban planning initiative, our team collaborated on a Green Streets project. We aimed to transform city streets into vibrant, green corridors, incorporating sustainable landscaping, pedestrian-friendly features, and community engagement. By fostering green spaces within the urban fabric, we sought to enhance the overall well-being of residents and contribute to a more sustainable and aesthetically pleasing urban environment.",
 "timestamp": "2022-06-20T16:30:00"
 },
 {
 "senderUserId": "David",
-"content": "That project sounds fascinating! Regarding career development, what opportunities does GreenScape offer for professional growth, especially in roles involving technology?",
-"timestamp": "2022-06-20T16:45:00"
-},
-{
-"senderUserId": "GreenScape",
-"content": "At GreenScape, we place a high value on continuous learning and professional growth. For individuals interested in roles involving technology, there are diverse opportunities such as Technology Integration Specialist, Sustainable Tech Solutions Developer, Environmental Data Analyst and Green Technology Innovation Manager. How can we tailor these opportunities to support your specific interests and facilitate your growth?",
-"timestamp": "2022-06-20T17:00:00"
-},
-{
-"senderUserId": "David",
-"content": "Great to hear! I'm particularly interested in AI-driven solutions for environmental monitoring. Can you tell me more about how GreenScape stays updated with emerging technologies in the field?",
+"content": "Great to hear! I'm particularly interested in cutting edge standards for urban planning. Can you tell me more about how GreenScape stays updated with emerging trends in the field?",
 "timestamp": "2022-06-20T17:15:00"
 },
 {
 "senderUserId": "GreenScape",
-"content": "Staying at the forefront of technology is crucial for us. We actively participate in industry conferences, fostering collaborations with research institutions to stay abreast of the latest advancements. This proactive approach ensures that our projects benefit from cutting-edge technologies. How do you usually keep yourself informed about the latest trends in technology?",
+"content": "Staying at the forefront of urban planning is crucial for us. We actively participate in urban planning conferences, fostering collaborations with research institutions to deliver the best possible proposals we can. This proactive approach ensures that our projects benefit from the newest research. How do you usually keep yourself informed about the latest trends in technology?",
 "timestamp": "2022-06-20T17:30:00"
 },
 {
 "senderUserId": "David",
-"content": "I believe in staying updated through online courses and networking. Lastly, how does GreenScape foster interest and enthusiasm among its team members for incorporating technology into projects?",
+"content": "I believe in staying updated through online courses and networking, as well as reading the newest publications in research. How does GreenScape foster interest and enthusiasm among its team members for incorporating the newest urban planning practices into projects?",
 "timestamp": "2022-06-20T17:45:00"
 },
 {
 "senderUserId": "GreenScape",
-"content": "Fostering a culture of innovation is key to our success. We organize monthly tech showcases and hackathons where team members can present their innovative ideas and solutions. Recognition and appreciation follow, creating a positive environment that fuels enthusiasm for incorporating technology into our projects. How do you think your innovative approach can contribute to our technology-driven initiatives?",
+"content": "We organize monthly showcases where team members can present their innovative ideas and solutions and we discuss current research. Recognition and appreciation follow, creating an environment that fuels enthusiasm for incorporating the newest urban planning approaches into our projects.",
 "timestamp": "2022-06-20T18:00:00"
 }
 ]

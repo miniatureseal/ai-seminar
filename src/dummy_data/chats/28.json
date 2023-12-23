@@ -4,12 +4,12 @@
   "messages": [
     {
       "senderUserId": "amueller",
-      "content": "Hello! I came across your offer for student assistants with a background in molecular biology and assay development. I'm interested in the position. Could you provide more details?",
+      "content": "Hello! I came across your offer for a position as a molecular biology and assay developer. I'm interested in the position. Could you provide more details?",
       "timestamp": "2023-03-16T13:30:00"
     },
     {
       "senderUserId": "bioelectronics",
-      "content": "Hi Anna! We're thrilled about your interest in our student assistant position. As part of our dynamic team, you'll engage in cutting-edge research projects focused on molecular biology and assay development. Your role will involve hands-on laboratory work, collaborating with our interdisciplinary team, and contributing to innovative solutions in the field. Our emphasis on teamwork and the pursuit of scientific excellence creates an environment where your skills and passion for molecular biology will thrive. We look forward to discussing how you can make meaningful contributions to our research initiatives!",
+      "content": "Hi Anna! We're thrilled about your interest! As part of our dynamic team, you'll engage in cutting-edge research projects focused on molecular biology and assay development. Your role will involve hands-on laboratory work, collaborating with our interdisciplinary team, and contributing to innovative solutions in the field. Our emphasis on teamwork and the pursuit of scientific excellence creates an environment where your skills and passion for molecular biology will thrive.",
       "timestamp": "2023-03-16T13:35:00"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "senderUserId": "bioelectronics",
-      "content": "Hi amueller, we're looking for dedicated student assistants with solid knowledge in molecular biology and experience in assay development. The position is available from October 1st for a one-year contract.",
+      "content": "We're looking for researchers with solid knowledge in molecular biology and experience in assay development. The position is available from October 1st for a one-year contract. Can you elaborate on your working experience so far?",
       "timestamp": "2023-03-16T13:45:00"
     }
   ]

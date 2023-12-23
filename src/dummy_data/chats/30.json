@@ -4,22 +4,22 @@
   "messages": [
     {
       "senderUserId": "amueller",
-      "content": "Hello! I'm intrigued by the open position at BioConsult. I graduated in Montreal but now I’m living in New York. I noticed you’re located on the west coast. Do you provide remote interviews for candidates?",
+      "content": "Hello! I'm intrigued by the open position at BioConsult. I graduated in Montreal but now I’m living in New York. I noticed that you’re located on the west coast. Do you provide remote interviews for candidates?",
       "timestamp": "2023-03-16T14:30:00"
     },
     {
       "senderUserId": "bioconsult",
-      "content": "Hi Anna! Thanks for reaching out. We're excited about your interest in the open position at BioConsult. While our physical location is on the west coast, we absolutely understand the global nature of talent acquisition. We do offer remote interviews for candidates, ensuring a seamless and accessible process for applicants like yourself. We believe in harnessing diverse experiences, and your background, having graduated in Montreal and now residing in New York, adds an enriching dimension to our team. Looking forward to potentially connecting with you in a remote interview!",
+      "content": "Hi Anna! Thanks for reaching out. We're excited about your interest in the open position at BioConsult. While our physical location is on the west coast, we absolutely understand the global nature of talent acquisition. We do offer remote interviews for candidates, ensuring a seamless and accessible process for applicants like yourself. We believe in harnessing diverse experiences, and your background, having graduated in Montreal and now residing in New York, adds an enriching dimension to our team.",
       "timestamp": "2023-03-16T14:35:00"
     },
     {
       "senderUserId": "amueller",
-      "content": "Hello again! I'm really enthusiastic about the prospect of joining BioConsult. Could you share more about your company culture, and if there's one key aspect that could give me a competitive advantage in the interview process, what would it be?",
+      "content": "That sounds amazing, thank you! Could you share more about what the tasks for the position as a Molecular Biologist entail? I have a background in molecular biology, so I’m curious about the specific responsibilities for this role.",
       "timestamp": "2023-03-16T14:40:00"
     },
     {
       "senderUserId": "bioconsult",
-      "content": "Hi Anna! Absolutely, our company culture revolves around a strong emphasis on teamwork. We believe collaborative efforts drive innovation and success. In interviews, showcasing your experience and proficiency in working effectively with teams would indeed be a significant advantage. Have you had previous experiences that highlight your teamwork skills?",
+      "content": "Sure Anna! The Molecular Biologist position is a full-time role that involves working with our team to develop and implement molecular biology techniques. This includes DNA and RNA extraction, PCR, and qPCR. We’re looking for someone who has experience with these techniques, and who is excited to work with our team to develop new methods and approaches. Do you have experience with these techniques?",
       "timestamp": "2023-03-16T14:45:00"
     }
   ]

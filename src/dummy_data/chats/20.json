@@ -5,12 +5,12 @@
   "messages": [
   {
   "senderUserId": "Sophie",
-  "content": "Hi GreenScape Solutions! I'm captivated by your commitment to community involvement. Can you share more about specific projects you've undertaken to enhance biodiversity?",
+  "content": "Hi GreenScape Solutions! I'm captivated by your commitment to environmentally sustainable urban planning. Can you share more about specific projects you've undertaken in this context?",
   "timestamp": "2023-03-15T20:00:00"
   },
   {
   "senderUserId": "GreenScape",
-  "content": "Hi Sophie! Your interest aligns with our mission. One of our noteworthy projects focused on enhancing biodiversity is our Energy Efficiency Programs. This initiative involves implementing energy audits, recommending energy-efficient appliances, and promoting smart home technologies. These efforts contribute not only to energy conservation but also to the overall enhancement of the local ecosystem. How do you think your background aligns with our mission?",
+  "content": "Hi Sophie! An example would be our recent project, Omega GreenConnect, our company endeavored to unify fragmented greenspaces across the town into a cohesive and interconnected green strip. How do you think your background aligns with our mission?",
   "timestamp": "2023-03-15T20:05:00"
   },
   {
@@ -20,7 +20,7 @@
   },
   {
   "senderUserId": "GreenScape",
-  "content": "Our collaborative atmosphere is integral to our success. We foster open communication and teamwork, valuing the diverse skills and perspectives each team member brings. For example, in our biodiversity projects, collaboration has been key to ensuring a holistic approach, incorporating insights from ecologists, landscape designers, and community outreach specialists. Can you share an experience from your previous roles where teamwork played a vital role?",
+  "content": "Our collaborative atmosphere is integral to our success. We foster open communication and teamwork, valuing the diverse skills and perspectives each team member brings. For example, in our projects, collaboration has been key to ensuring a holistic approach, incorporating insights from ecologists, and business and technology experts.",
   "timestamp": "2023-03-15T20:15:00"
   },
   {
@@ -30,7 +30,7 @@
   },
   {
   "senderUserId": "GreenScape",
-  "content": "We have some exciting projects lined up, including a brand new initiative for transforming the agricultural sector. This project aims to integrate sustainable practices, technology, and community engagement to create a more resilient and environmentally friendly agricultural system. Your enthusiasm is valuable. How do you see your skills contributing to the success of such initiatives?",
+  "content": "We're thrilled to share that we've got some exciting urban planning projects on the horizon, including a fresh initiative aimed at revitalizing urban spaces and giving people the right tools to contibute to sustainable urbanism. This project is designed to incorporate forward-thinking planning practices and actively involve the community to create a more resilient and environmentally friendly urban environment. Your enthusiasm and expertise would play a crucial role in bringing this initiative to life.",
   "timestamp": "2023-03-15T20:25:00"
   },
   {
@@ -40,7 +40,7 @@
   },
   {
   "senderUserId": "GreenScape",
-  "content": "Certainly! Our career paths are diverse and tailored to individual interests. For someone passionate about community engagement, there are roles in project management, community outreach, and sustainable development. What aspects of community engagement are you most passionate about, and how do you envision contributing to our goals?",
+  "content": "Certainly! Our career paths are diverse and tailored to individual interests. For someone passionate about technology we have roles in software development, data science, and more.",
   "timestamp": "2023-03-15T20:35:00"
   }
   ]
