@@ -4,16 +4,14 @@ from langchain.prompts.prompt import PromptTemplate
 
 class TemplateGenerator:
     _PROMPT_TEMPLATE = (
-        "{introduction}\n\n" + "{context_placeholder}\n\n" + "{start}\n\n" + "{format}"
+        "{introduction}\n" + "{context_placeholder}\n" + "{start}\n" + "{format}"
     )
 
-    _PROMPT_INTRODUCTION = (
-        "Generate three possible replies user {active_user_id} could write taking into consideration the chat so far, as well as the information of the context messages provided from previous chats.\n"
-        "Each generated reply should address all questions and open points of the message which should be replied to. The replies should only include relevant information which is known through the context messages from previous chats and is needed to answer the text. Don't make up new information. The replies should not include information already written in the chat so far. Take into consideration the users {active_user_id} writing style as well.\n\n"
-    )
+    _PROMPT_INTRODUCTION = "Please generate three possible chat replies for user etaylor, taking into account the chat so far and especially focusing on incorporating the knowledge from the context.\n"
 
     _PROMPT_START = (
-        "Context messages from previous chats:"
+        "The replies should only include relevant information known through the context messages from previous chats and is needed to answer the text. Avoid making up new information and don't deviate from the user's writing style. Also, please ensure that all replies convey the same information but are rephrased differently.\n\n"
+        "Context:"
         "------------\n"
         "{previous_chat_context}\n"
         "------------\n"
@@ -27,9 +25,9 @@ class TemplateGenerator:
         "------------\n"
     )
 
-    _CONTEXT_INFO_COMPANY = "User {active_user_id} is a representant of a company and is seeking people to hire for a job.\n"
+    _CONTEXT_INFO_COMPANY = "User {active_user_id} is a representant of a company and is seeking people to hire for a job. The context includes past interactions and discussions that occurred between the company {active_user_id} and potential job seekers. The replies should address all questions and open points of the latest message from the job seeker.\n"
 
-    _CONTEXT_INFO_JOB_SEEKER = "User {active_user_id} is a job seeker and is writing with a representant from a company which is offers a job he is interested in.\n"
+    _CONTEXT_INFO_JOB_SEEKER = "User {active_user_id} is a job seeker and is writing with a representant from a company which offers a job he is interested in. The context includes past interactions and discussions that occurred between the job seeker {active_user_id} and companies he is interested in. The replies should address all questions and open points of the latest message from the company representative.\n"
 
     _FORMAT_INSTRUCTIONS = "{format_instructions}"
 
