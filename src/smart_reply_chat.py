@@ -22,7 +22,7 @@ class IntelligentChat:
         chat_model = ChatOpenAI(
             model=self.config.get("OPENAI", "VERSION"),
             openai_api_key=self.openai_key,
-            temperature=0,
+            temperature=0.1,
         )
         self.dummy_data_access = DummyDataAccess()
         self.db_helper = ChromaDBHelper()
