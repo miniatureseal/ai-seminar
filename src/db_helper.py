@@ -21,7 +21,7 @@ class ChromaDBHelper:
         self.config.read(here("config.ini"))
         self.dummy_data_access = DummyDataAccess()
         self.openai_key = get_openai_key()
-        self.embed_fct = embedding_functions.OpenAIEmbeddingFunction(
+        embed_fct = embedding_functions.OpenAIEmbeddingFunction(
             api_key=self.openai_key, model_name="text-embedding-ada-002"
         )
         self.vectorstore_client = chromadb.PersistentClient(
@@ -29,7 +29,7 @@ class ChromaDBHelper:
         )
         self.message_collection = self.vectorstore_client.get_or_create_collection(
             name="chat_messages",
-            embedding_function=self.embed_fct,
+            embedding_function=embed_fct,
             metadata={"hnsw:space": "cosine"},
         )
         self.text_splitter = RecursiveCharacterTextSplitter(
@@ -87,6 +87,9 @@ class ChromaDBHelper:
             )
 
     def get_langchain_retriever(self, chat_user, active_chat_id):
+        """
+        Usage depricated, as similarity_search_with_relevance_scores delivers better results but somehow can't be called in the context of a retriever, so now mainly similarity_search_with_relevance_scores is used and this function only serves development purposes
+        """
         langchain_chroma = Chroma(
             client=self.vectorstore_client,
             collection_name="chat_messages",
@@ -110,3 +113,26 @@ class ChromaDBHelper:
                 "filter": filter,
             },
         )
+
+    def similarity_search_with_relevance_scores(self, query, chat_user, active_chat_id):
+        langchain_chroma = Chroma(
+            client=self.vectorstore_client,
+            collection_name="chat_messages",
+            embedding_function=OpenAIEmbeddings(openai_api_key=self.openai_key),
+        )
+
+        filter = {
+            "$and": [
+                {"user": {"$eq": chat_user}},
+                {"chat_id": {"$ne": int(active_chat_id)}},
+            ]
+        }
+
+        results = langchain_chroma.similarity_search_with_relevance_scores(
+            query=query,
+            k=int(self.config.get("SETTINGS", "TOP_K_SIM_MESSAGES_RETURNED")),
+            score_threshold=float(self.config.get("SETTINGS", "SIMILARITY_THRESHOLD")),
+            filter=filter,
+        )
+
+        return results
