@@ -165,5 +165,3 @@ src/database/
 !src/database/.gitkeep
 src/output/
 !src/output/.gitkeep
-
-chroma_testing.py
