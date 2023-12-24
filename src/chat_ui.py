@@ -52,7 +52,7 @@ class ChatInterface:
         divider = tk.Frame(root, height=2, width=70, bd=1, relief=tk.SUNKEN)
         divider.pack(pady=1)
 
-        self.entry_field = tk.Text(root, wrap=tk.WORD, height=5, width=70)
+        self.entry_field = tk.Text(root, wrap=tk.WORD, height=10, width=100)
         self.entry_field.pack(pady=5)
 
         self.send_button = tk.Button(root, text="Send", command=self._send_message)
