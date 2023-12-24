@@ -1,12 +1,12 @@
-import tkinter as tk
-from tkinter import scrolledtext, RIGHT, LEFT
-
 import json
 import os
+import tkinter as tk
+from tkinter import scrolledtext
 from pyprojroot.here import here
 from nltk import download
 from nltk.translate import bleu_score
 from nltk.tokenize import word_tokenize
+
 from smart_reply_chat import IntelligentChat
 from langchain.schema import OutputParserException
 

@@ -1,9 +1,3 @@
-from openai_key_retrieval import get_openai_key
-from dummy_data_access import DummyDataAccess
-from template_generator import TemplateGenerator
-from response_object import ResponseObject
-from db_helper import ChromaDBHelper
-
 import configparser
 from pyprojroot.here import here
 from langchain.chat_models import ChatOpenAI
@@ -11,6 +5,12 @@ from langchain.output_parsers import PydanticOutputParser
 from langchain.globals import set_debug
 from operator import itemgetter
 from langchain_core.runnables import RunnableLambda
+
+from openai_key_retrieval import get_openai_key
+from dummy_data_access import DummyDataAccess
+from template_generator import TemplateGenerator
+from response_object import ResponseObject
+from db_helper import ChromaDBHelper
 
 
 class IntelligentChat:
