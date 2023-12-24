@@ -13,7 +13,7 @@ scenarios = {
 # Scenario which is picked
 scenario = "amueller"
 # Name of the participant of the experiment, used for logging by whom a message was written
-experiment_participant_name = "Jan Zimny"
+experiment_participant_name = "Default User"
 
 db_helper = ChromaDBHelper()
 db_helper.initialize_db()
