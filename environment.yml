@@ -1,0 +1,14 @@
+name: smart-reply-env
+channels:
+  - defaults
+dependencies:
+  - python=3.10.13
+  - nltk=3.8.1
+  - pydantic=1.10.12
+  - pip=23.3
+  - pip:
+      - tiktoken==0.5.1
+      - openai==1.6.1
+      - langchain==0.0.352
+      - chromadb==0.4.17
+      - pyprojroot==0.3.0
