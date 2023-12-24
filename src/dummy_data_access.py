@@ -75,10 +75,3 @@ class DummyDataAccess:
             return data
         else:
             return None
-
-    def persist_chat(self, chat_data):
-        chat_id = chat_data["id"]
-        chat_file_path = os.path.join(self.chat_folder_path, f"{chat_id}.json")
-
-        with open(chat_file_path, "w", encoding="utf-8") as file:
-            json.dump(chat_data, file, indent=2)

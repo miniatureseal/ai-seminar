@@ -45,7 +45,7 @@ class ChatInterface:
             text.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
             text.bind(
                 "<ButtonRelease-1>",
-                lambda event, index=i: self.insert_suggestion(event),
+                lambda event, index=i: self._insert_suggestion(event),
             )
             self.suggestion_texts.append(text)
 
@@ -55,44 +55,42 @@ class ChatInterface:
         self.entry_field = tk.Text(root, wrap=tk.WORD, height=5, width=70)
         self.entry_field.pack(pady=5)
 
-        self.send_button = tk.Button(root, text="Send", command=self.send_message)
+        self.send_button = tk.Button(root, text="Send", command=self._send_message)
         self.send_button.pack(pady=5)
-        self.load_chat_from_index()
+        self._load_chats_from_index()
 
-    def load_chat_from_index(self):
-        self._show_loading_status()
+    def _load_chats_from_index(self):
+        self._reset_inputs()
 
         active_chat = IntelligentChat(
             self.active_user, self.chat_ids[self.current_chat_index]
         )
-        self.display_messages(active_chat.get_message_data(), self.active_user)
+        self._display_messages(active_chat.get_message_data(), self.active_user)
         try:
             smart_replies = active_chat.generate_smart_replies()
-            self.populate_suggestions(
+            self._populate_suggestions(
                 [smart_replies.reply1, smart_replies.reply2, smart_replies.reply3]
             )
         except OutputParserException:
-            self.populate_suggestions(["NA"] * 3)
+            self._populate_suggestions(["NA"] * 3)
 
-    def _show_loading_status(self):
+    def _reset_inputs(self):
         self.chat_display.delete("1.0", tk.END)
-        self.chat_display.insert(tk.END, "Please wait, the chat is loading...")
 
         for i in range(3):
             suggestion = self.suggestion_texts[i]
             suggestion.delete("1.0", tk.END)
-            suggestion.insert(tk.END, "Please wait, the chat is loading...")
 
-    def send_message(self):
+    def _send_message(self):
         message = self.entry_field.get("1.0", tk.END).strip()
 
-        self.display_user_message("You", "You", message, align=RIGHT)
+        self._display_message_for_active_user(message)
         suggested_tokens = word_tokenize(self.last_selected_suggestion.lower())
         user_edited_tokens = word_tokenize(message.lower())
         bleu_result = bleu_score.sentence_bleu(
             [suggested_tokens], user_edited_tokens, weights=(1, 0, 0, 0)
         )
-        self.save_user_input_to_file(
+        self._save_user_input_to_file(
             {
                 "written_by": self.experiment_participant_name,
                 "chat_id": self.chat_ids[self.current_chat_index],
@@ -106,43 +104,40 @@ class ChatInterface:
         self.current_chat_index += 1
         self.entry_field.delete("1.0", tk.END)
         if self.current_chat_index < len(self.chat_ids):
-            self.load_chat_from_index()
+            self._load_chats_from_index()
         else:
             self.send_button.config(state="disabled")
             self.entry_field.insert(
                 tk.END, "Thank you for taking part in the experiment!"
             )
 
-    def populate_suggestions(self, suggestions):
+    def _populate_suggestions(self, suggestions):
         if len(suggestions) == len(self.suggestion_texts):
             for i, suggestion in enumerate(suggestions):
                 text = self.suggestion_texts[i]
-                text.delete("1.0", tk.END)
                 text.insert(tk.END, suggestion)
 
-    def insert_suggestion(self, event):
+    def _insert_suggestion(self, event):
         selected_suggestion = event.widget.get("1.0", tk.END).strip()
-
         self.last_selected_suggestion = selected_suggestion
-
         self.entry_field.delete("1.0", tk.END)
         self.entry_field.insert(tk.END, selected_suggestion)
 
-    def display_messages(self, messages, active_user):
-        self.chat_display.delete("1.0", tk.END)
+    def _display_messages(self, messages, active_user):
         for message in messages:
             sender = message["senderUserId"]
             content = message["content"]
-            align = RIGHT if sender == active_user else LEFT
-            self.display_user_message(sender, active_user, content, align)
+            self._display_message(sender, content, active_user)
 
-    def display_user_message(self, sender, active_user, content, align):
-        sender = "You" if sender == active_user else sender
+    def _display_message_for_active_user(self, content):
+        self._display_message(self.active_user, content, self.active_user)
+
+    def _display_message(self, sender, content, active_user):
+        sender = active_user + "(You)" if sender == active_user else sender
         formatted_message = f"{sender}: {content}"
-        self.chat_display.insert(tk.END, formatted_message + "\n\n", align)
-        self.chat_display.tag_configure(sender, background="#E0E0E0")
+        self.chat_display.insert(tk.END, formatted_message + "\n\n")
 
-    def save_user_input_to_file(self, data):
+    def _save_user_input_to_file(self, data):
         folder_path = str(here("src/output/" + self.experiment_participant_name))
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)

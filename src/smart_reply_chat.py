@@ -97,18 +97,6 @@ class IntelligentChat:
         )
         return results
 
-    def _get_message_to_reply_to(self):
-        message = max(
-            (
-                message
-                for message in self.active_chat["messages"]
-                if message["senderUserId"] != self.chat_user
-            ),
-            key=lambda x: x["timestamp"],
-            default=None,
-        )
-        return message["content"]
-
     def _get_messages_to_reply_to(self):
         latest_messages = []
 

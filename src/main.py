@@ -13,7 +13,7 @@ scenarios = {
 }
 
 # Scenario which is picked
-scenario_user = "etaylor"
+scenario_user = "amueller"
 # Name of the participant of the experiment, used for logging by whom a message was written
 experiment_participant_name = "Paul Blöcher"
 
