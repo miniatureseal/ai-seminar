@@ -13,7 +13,7 @@ scenarios = {
 }
 
 # Scenario which is picked
-scenario_user = "amueller"
+scenario = "etaylor"
 # Name of the participant of the experiment, used for logging by whom a message was written
 experiment_participant_name = "Paul Blöcher"
 
@@ -23,8 +23,8 @@ db_helper.initialize_db()
 root = tk.Tk()
 chat_interface = ChatInterface(
     root,
-    scenario_user,
-    scenarios[scenario_user],
+    scenario,
+    scenarios[scenario],
     experiment_participant_name,
 )
 root.update_idletasks()

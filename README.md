@@ -10,7 +10,7 @@ To run the code required for the experiment you need to follow these steps:
 2. Clone the repository to the directory of your choice.
 3. Now you need to install the required dependencies. You can do that by opening a terminal window on linux or mac os or git bash on windows. Navigate to the root of this repository and run `conda env create -f environment.yml`. This should install all needed dependencies for running the code. Switch to the now installed virtual conda environment using `conda activate smart-reply-env`
 4. Add your OpenAI API key in the file `config.ini` in the root directory beneath the variable `KEY`. You don't need to add quotation marks.
-5. Now open the file `main.py` in the `src` folder and modify the variables `experiment_participant_name`, and the `scenario_user` to choose which chats to run.
+5. Now open the file `main.py` in the `src` folder and modify the variables `experiment_participant_name`, and the `scenario` to choose which persona and chats to run.
 6. Now run `main.py` and hand the laptop to the person taking part in the experiment.
 
 ## Other useful commands
