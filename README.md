@@ -26,3 +26,8 @@ When testing the code you may generate output files which you want to delete aga
 ### Resetting both the vectorstore and output
 
 You can run `make reset` to run both of the above mentioned commands. Ideal to reset the project to a clean slate.
+
+## Other tips
+
+If you want to play around with the information retrieval component you can checkout the file `src/chroma_testing.py`.
+With the file you can query the dummy data for similar text chunks.
