@@ -7,7 +7,7 @@ class TemplateGenerator:
         "{introduction}\n" + "{context_placeholder}\n" + "{start}\n" + "{format}"
     )
 
-    _PROMPT_INTRODUCTION = "Please generate three possible chat replies for user etaylor, taking into account the chat so far and especially focusing on incorporating the knowledge from the context.\n"
+    _PROMPT_INTRODUCTION = "Please generate three possible chat replies for user {active_user_id}, taking into account the chat so far and especially focusing on incorporating the knowledge from the context.\n"
 
     _CONTEXT_INFO_COMPANY = "User {active_user_id} is a representative of a company and is seeking people to hire for a job. The context includes past interactions and discussions that occurred between the company {active_user_id} and potential job seekers. The replies should address all questions and open points of the latest message from the job seeker.\n"
 
