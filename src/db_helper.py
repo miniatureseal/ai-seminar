@@ -108,8 +108,10 @@ class ChromaDBHelper:
 
         results = langchain_chroma.similarity_search_with_relevance_scores(
             query=query,
-            k=int(self.config.get("SETTINGS", "TOP_K_SIM_MESSAGES_RETURNED")),
-            score_threshold=float(self.config.get("SETTINGS", "SIMILARITY_THRESHOLD")),
+            k=int(self.config.get("INFO_RETRIEVAL", "TOP_K_SIM_MESSAGES_RETURNED")),
+            score_threshold=float(
+                self.config.get("INFO_RETRIEVAL", "SIMILARITY_THRESHOLD")
+            ),
             filter=filter,
         )
 
