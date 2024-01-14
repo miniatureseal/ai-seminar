@@ -11,7 +11,7 @@ class TemplateGenerator:
 
     _CONTEXT_INFO_COMPANY = "User {active_user_id} is a representative of a company and is seeking people to hire for a job. The context includes past interactions and discussions that occurred between the company {active_user_id} and potential job seekers. The replies should address all questions and open points of the latest message from the job seeker.\n"
 
-    _CONTEXT_INFO_JOB_SEEKER = "User {active_user_id} is a job seeker and is writing with a representant from a company which offers a job he is interested in. The context includes past interactions and discussions that occurred between the job seeker {active_user_id} and companies he is interested in. The replies should address all questions and open points of the latest message from the company representative.\n"
+    _CONTEXT_INFO_JOB_SEEKER = "User {active_user_id} is a job seeker and is writing with a representative from a company which offers a job he is interested in. The context includes past interactions and discussions that occurred between the job seeker {active_user_id} and companies he is interested in. The replies should address all questions and open points of the latest message from the company representative.\n"
 
     _PROMPT_START = (
         "The replies should only include relevant information known through the context messages from previous chats and is needed to answer the text. Avoid making up new information and don't deviate from the user's writing style. Also, please ensure that all replies convey the same information but are rephrased differently. Don't greet the user which you are replying to again if you already greeted him in the chat history.\n\n"
