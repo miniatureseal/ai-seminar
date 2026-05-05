@@ -2,6 +2,8 @@
 
 This is a repo for a research seminar at TU Darmstadt which analysis how AI based chat reply suggestions are perceived by users.
 
+![Smart Reply Experiment Interface](static/interface.png)
+
 ## How to run the experiment
 
 To run the code required for the experiment you need to follow these steps:
